@@ -1,0 +1,104 @@
+																	**Matheus Gadelha**
+
+[College of Information and Computer Sciences](https://www.cics.umass.edu/) in the
+[University of Massachusetts - Amherst](https://www.cics.umass.edu/).
+Currently, I am working as a Research Assistant in the 
+[Computer Graphics Research Group](http://graphics.cs.umass.edu/) under the supervision of 
+[Prof. Rui Wang](https://people.cs.umass.edu/~ruiwang/).
+
+Prior to joining UMass, I've obtained my bachelor's and master's degrees in Computer Science 
+from [Federal University of Rio Grande do Norte](https://sistemas.ufrn.br/portal/PT/), 
+while working at IMAGINA Research Lab, under the supervision of Profs. Selan dos Santos 
+and Bruno Motta de Carvalho.
+
+I am interested in Computer Graphics, Vision and its intersections with Machine Learning.
+More recently, I've been working on image and shape synthesis through deep learning
+with [Prof. Subhransu Maji](http://people.cs.umass.edu/~smaji/) and 
+[Prof. Rui Wang](https://people.cs.umass.edu/~ruiwang/).
+
+[[CV](cv.pdf)]
+[[email](mgadelha@cs.umass.edu)]
+
+
+News
+============================================================================================
+
+- (December, 23rd) [Check](prgan/index.html) the page for our paper _3D Shape Induction from 2D Views of Multiple Objects_.  
+- (December, 18th) Our new paper _3D Shape Induction from 2D Views of Multiple Objects_ is on ArXiv. [Check it out!](https://arxiv.org/pdf/1612.05872.pdf)
+
+Research
+============================================================================================
+
+3D Shape Induction from 2D Views of Multiple Objects
+----------------------------------------------------
+![Learning to create shapes from images without any annotation](prgan/fig/overview.png width="25%")
+Our approach called "Projective Generative Adversarial Networks" (PrGANs) trains a deep generative 
+model of 3D shapes whose projections match the distributions of the input 2D views. 
+The addition of a projection module allows us to infer the underlying 3D shape distribution without 
+using any 3D, viewpoint information, or annotation during the learning phase. 
+We show that our approach produces 3D shapes of comparable quality to GANs trained on 3D data 
+for a number of shape categories including chairs, airplanes, and cars. 
+Experiments also show that the disentangled representation of 2D shapes into geometry and viewpoint 
+leads to a good generative model of 2D shapes. 
+The key advantage is that our model allows us to predict 3D, viewpoint, and generate novel views 
+from an input image in a completely unsupervised manner.
+[[ArXiv](https://arxiv.org/pdf/1612.05872.pdf)]
+[[Project Page](prgan/index.html)]
+
+
+Discrete Image Descriptors
+--------------------------
+Computing descriptors for image features is a crucial task in many applications. 
+A good feature descriptor is capable of providing invariance to geometric and lightning transformations 
+while consuming as few memory as possible. 
+Binary descriptors only store a single bit per pixel comparison, and an useful portion of information, 
+about how large the difference of intensity is, is lost due to this quantization. 
+This work proposes a generalization of the binary descriptor idea: the discrete descriptor called DRINK. 
+Using this idea, we are able to use more information related to the intensity difference while 
+preserving the speed of the original binary descriptor.
+[[code](https://github.com/matheusgadelha/DRINK)]
+
+
+
+Projects
+============================================================================================
+
+Interactive Mesh Deformation w/ ARAP Surface Modeling
+-----------------------------------------------------
+
+![As Rigid as Possible Interactive Demo](https://www.youtube.com/watch?v=QUtpoybhYA8)
+Implementation of the ARAP Surface Modeling paper. 
+It includes a software to deform any mesh, applying the computed transformation in real time. 
+It was coded in C++ with Eigen library and OpenGL.
+[[code](https://github.com/matheusgadelha/Pintar)]
+
+Rigid Body Simulation
+-----------------------------------------------------
+Rigid body simulator coded in C++ with Eigen library and OpenGL. 
+The code includes a demo where you can load any model and interactively draw forces.
+	[[code](https://github.com/matheusgadelha/Pintar)]
+
+
+Subdivision Surface
+-----------------------------------------------------
+Code in C++ to perform subdivision of a closed triangular mesh. Made from scratch, so no
+libraries are required.
+[[code](https://github.com/matheusgadelha/SubdivisionSurfaces)]
+![Smoothing bunnies w/ subdivision surfaces.](fig/bunny_gets_better.png)
+
+
+Generic A* implementation and CSP solver
+-----------------------------------------------------
+Template-based implementation for the A* algorithm and CSP solver written in C++. 
+It is a generic solver, where you can simply define the successor and heuristic function for each problem. 
+Includes examples on solving knight shortest path problem and the classic TSP (w/ Minimum Spanning Tree heuristic).
+CSP solver includes an efficient sudoku solver example.
+[[A* code](https://github.com/matheusgadelha/AStar)]
+[[CSP code](https://github.com/matheusgadelha/CSPSolver)]
+
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js"></script><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js"></script>
+<script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+<style>
+h1:before, h2:before { content: none; }
+body{max-width: 900px}
+</style>
