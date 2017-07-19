@@ -24,11 +24,30 @@ with [Prof. Subhransu Maji](http://people.cs.umass.edu/~smaji/) and
 News
 ============================================================================================
 
-- (December, 23rd) [Check](prgan/index.html) the page for our paper _3D Shape Induction from 2D Views of Multiple Objects_.  
-- (December, 18th) Our new paper _3D Shape Induction from 2D Views of Multiple Objects_ is on ArXiv. [Check it out!](https://arxiv.org/pdf/1612.05872.pdf)
+- (July 19th, 2017) [Check](sppc/index.html) the page for our paper _Shape Generation using Spatially Partitioned Point Clouds_.
+- (July 4th, 2017) Our paper _Shape Generation using Spatially Partitioned Point Clouds_ has been accepted do BMVC 2017!
+- (December 23rd, 2016) [Check](prgan/index.html) the page for our paper _3D Shape Induction from 2D Views of Multiple Objects_.  
+- (December 18th, 2016) Our new paper _3D Shape Induction from 2D Views of Multiple Objects_ is on [ArXiv](https://arxiv.org/pdf/1612.05872.pdf).
 
 Research
 ============================================================================================
+
+Shape Generation using Spatially Partitioned Point Clouds
+---------------------------------------------------------
+![kd-tree sorted Point Clouds](sppc/fig/airplanes_sorting_new2.png width="25%")
+We propose a method to generate 3D shapes using point clouds. 
+Given a point-cloud representation of a 3D shape, our method builds a kd-tree to spatially partition the points. 
+This orders them consistently across all shapes, resulting in reasonably good correspondences across all shapes. 
+We then use PCA analysis to derive a linear shape basis and optimize the point ordering 
+by iteratively minimizing the PCA reconstruction error. 
+We propose to use the expressive power of neural networks to learn a distribution over the shape coefficients in a generative-adversarial framework. 
+Compared to 3D shape generative models trained on voxel-representations, 
+our point-based method is considerably more light-weight and scalable, with little loss of quality. 
+Furthermore, our method can easily incorporate other point attributes such as normal and color information, 
+an additional advantage over voxel-based representations.
+[[ArXiv](https://arxiv.org/pdf/1612.05872.pdf)]
+[[Project Page](sppc//index.html)]
+
 
 3D Shape Induction from 2D Views of Multiple Objects
 ----------------------------------------------------

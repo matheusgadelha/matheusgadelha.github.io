@@ -1,0 +1,36 @@
+			**Shape Generation using Spatially Partitioned Point Clouds**
+					[Matheus Gadelha](http://matheusgadelha.github.io/home/index.html), [Subhransu Maji](http://people.cs.umass.edu/~smaji/) and [Rui Wang](https://people.cs.umass.edu/~ruiwang/)
+					_University of Massachusetts - Amherst_
+
+							![](fig/abstract.png)
+
+We propose a method to generate 3D shapes using point clouds. 
+Given a point-cloud representation of a 3D shape, our method builds a kd-tree to spatially partition the points. 
+This orders them consistently across all shapes, resulting in reasonably good correspondences across all shapes. 
+We then use PCA analysis to derive a linear shape basis across the spatially partitioned points, 
+and optimize the point ordering by iteratively minimizing the PCA reconstruction error. 
+Even with the spatial sorting, the point clouds are inherently noisy and the resulting distribution over the shape coefficients can be highly multi-modal. 
+We propose to use the expressive power of neural networks to learn a distribution over the shape coefficients in a generative-adversarial framework. 
+Compared to 3D shape generative models trained on voxel-representations, 
+our point-based method is considerably more light-weight and scalable, with little loss of quality. 
+It also outperforms simpler linear factor models such as Probabilistic PCA, 
+both qualitatively and quantitatively, on a number of categories from the ShapeNet dataset. 
+Furthermore, our method can easily incorporate other point attributes such as normal and color information, 
+an additional advantage over voxel-based representations.
+
+Paper
+==========================================================================================
+
+	![[[ArXiv](https://arxiv.org/pdf/1612.05872.pdf)]](fig/thumbnail.png)
+
+Code
+============================================================================================
+
+_Coming soon..._
+
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js"></script><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+<style>
+h1:before, h2:before { content: none; }
+body{max-width: 900px}
+</style>
+
