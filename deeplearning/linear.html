@@ -1,0 +1,92 @@
+															**Introdução a Deep Learning - Classificadores Lineares**
+
+_Deep Learning_ vem recebendo cada vez mais atenção da indústria e da academia.
+Coincidentemente, essa vem sendo uma ferramenta crucial na minha pesquisa desde que inicei meu Ph.D. na [UMass](http://cics.umass.edu).
+Não por acaso: quase todos os trabalhos publicados em conferências como CVPR, ICCV, ICML, NIPS, etc, tem _Deep Learning_
+como ferramenta central.
+Ela vem sendo utilizada em uma grande variedade de aplicações: reconhecimento de imagens, tradução de linguagem natural,
+reconhecimento de áudio, geração de áudio, inteligência artificial para jogos, direção autônoma de veículos, etc.
+No entanto, apesar da popularidade, uma rápida pesquisa me mostrou que o conteúdo sobre _Deep Learning_ em
+português é praticamente inexistente.
+Sendo assim, decidi aproveitar um pouco dos meus finais de semana pra escrever sobre o tópico
+e fazer minha parte na "democratização científica".
+
+Também é uma excelente maneira de organizar minhas próprias anotações :-).
+
+
+O que é _Deep Learning_
+---------------------------
+
+Antes de explicar _Deep Learning_, um exemplo.
+Imagine que você queira construir um programa que, dado a imagem de um cachorro, informa se
+o cachorro é um _poodle_ ou não.
+Essa é uma tarefa bem complicada de programar.
+Tradicionalmente, você tentaria utilizar técnicas de processamento de imagens.
+Você poderia utilizar começar identificando arestas com um [filtro de Sobel](https://en.wikipedia.org/wiki/Sobel_operator),
+depois extrair algumas formas geométricas básicas utilizando a [transformada de Hough](https://en.wikipedia.org/wiki/Hough_transform).
+Agora você pode ter uma ideia de onde estaria o animal identificando os olhos ou o focinho.
+Por fim, tendo identificado os olhos, observar a textura da pele, o formato das orelhas ou outras _features_ (características)
+que são úteis pra decidir se trata-se de um _poodle_ ou não.
+Eu não entendo de cachorro então não sei dizer.
+Talvez fosse melhor ter utilizado outro exemplo.
+Tarde demais.
+
+A conclusão é simples.
+Esse processo todo dá muito trabalho.
+Decidir o que são características determinantes requer o conhecimento de um especialista.
+Mesmo sabendo que características são essas, é muito difícil construir um programa que as identifique.
+Contudo, já estamos familiarizados com programas que fazem tarefas muito mais complicadas
+do que identificar a raça de um cachorro.
+Ora, se o facebook consegue identificar sua cara -- um espécime específico -- numa foto, não dever ser impossível
+identificar um _poodle_.
+E, de fato, não é.
+É relativamente fácil.
+Contudo, o funcionamento de tal sistema não foi definido inteiramente por um programador que decidiu qual sequência
+de operações deveria ser aplicada.
+Ele foi definido por um modelo estatístico criado a partir de um conjunto de dados (_dataset_).
+Em Ciência da Computação, a área que estuda esses modelos recebe o nome de **Aprendizado de Máquina** (Machine Learning).
+
+Um dos modelos estudados pelo _Aprendizado de Máquina_ são as redes neurais.
+Redes neurais são construídas de maneira hierárquica, uma camada após a outra.
+Agora, finalmente, podemos definir o que é _Deep Learning_.
+
+**Deep Learning** é uma área que estuda utilização de redes neurais com muitas camadas.
+Hoje em dia, _muitas_ pode significar mais de uma centena, mas os modelos que "fundaram" _Deep Learning_
+tinham pouco mais de uma dezena de camadas.
+
+
+Classificando pontos
+--------------------
+
+Imagine agora um conjunto de pontos em $\mathcal{R}^2$.
+Esses pontos estão separados em dois conjuntos: _vermelho_ e _azul_.
+Contudo, essa separação não acontece de maneira aleatória.
+Os pontos próximos ao ponto $\begin{bmatrix}4 & 4\end{bmatrix}$ possuem cor _azul_, enquanto os pontos próximos
+ao ponto $\begin{bmatrix} -4 & -4\end{bmatrix}$ possuem cor vermelha.
+Esses pontos podem ser observados na Figura 1.
+
+![**Figura 1**. Pontos no plano euclideano. Cada ponto pode ser representado por um vetor $p \in \mathcal{R}^2$.](classified_points.png width="50%")
+
+Agora imagine que surja um novo ponto $p^\prime$. Qual seria uma boa maneira de dizer 
+
+
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style>
+<script>markdeepOptions = {tocStyle: 'none'};</script>
+<script src="markdeep.min.js"></script>
+<script src="https://casual-effects.com/markdeep/latest/markdeep.min.js"></script>
+<script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+<style>
+h1:before, h2:before { content: none; }
+body{max-width: 900px}
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-102648389-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
