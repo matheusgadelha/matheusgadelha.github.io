@@ -67,7 +67,79 @@ Esses pontos podem ser observados na Figura 1.
 
 ![**Figura 1**. Pontos no plano euclideano. Cada ponto pode ser representado por um vetor $p \in \mathcal{R}^2$.](classified_points.png width="50%")
 
-Agora imagine que surja um novo ponto $p^\prime$. Qual seria uma boa maneira de dizer 
+Agora imagine que surja um novo ponto $p^\prime$, ilustrado na Figura 2.  
+Julgando pela posição na qual o ponto se encontra, eu diria que há uma _probabilidade_ altíssima
+de $p^\prime$ ser azul.
+Uma maneira de justificar essa minha intuição é analisar os pontos próximos a $p^\prime$.
+Caso eu escolha, por exmeplo, os 5 pontos mais próximos a $p^/prime$, todos esses serão pontos de cor azul.
+Portanto, classificar $p^\prime$ como azul é um bom "chute".
+
+![**Figura 2**. Novo ponto de classificação desconhecida.](pprime.png width="50%")
+
+O que acabei de descrever foi um dos _classificadores_ mais simples de se implementar (de maneira pouco eficiente):
+$k$-**Nearest Neighbors** (k**NN**).
+Especificamente, descrevi o caso particular em que $k=5$.
+
+Contudo, o $kNN$ possui um problema terrível.
+Sua complexidade aumenta conforme a quantidade de dados que você possui.
+Em outras palavras, quanto mais dados disponíveis mais custosa será a sua classificação.
+Essa é uma situação totalmente indesejável, pois inviabiliza a escalabilidade do nosso classificador.
+
+Mas não se preocupe, eu tenho uma ideia melhor.
+Eu irei traçar uma reta entre os dos conjuntos de pontos e dizer que todos os pontos
+de um lado possuem cor _azul_ e os pontos do outro possuem cor _vermelha_.
+Mas como representamos essa reta? 
+Mais importante: como podemos descobrir qual é essa reta sem ter que
+plotar um gráfico e codificá-la "na mão"?
+Ou seja: como fazer a máquina inferir/aprender essa reta apenas passando o conjunto de dados? 
+
+
+Classificadores Lineares
+------------------------
+
+Agora vamos entrar nos detalhes da solução proposta no final da seção anterior.
+Nós temos um conjunto de pontos $\mathcal{P}$, tal que $|\mathcal{P}|=N$
+($\mathcal{P}$ tem $N$ pontos).
+Cada ponto $\mathbf{p}_i \in \mathcal{P}$ pertence a categoria _azul_ ou _vermelho_.
+Assim, podemos imaginar q existe uma função $\phi$ que recebe um ponto $\mathbf{p}_i$
+e retorna uma classificação.
+Por simplicidade, vamos passar a representar essa classificação como um número ao invés de uma cor.
+Em outra palavras $\phi(\mathbf{p}) > 0$ se $p$ for azul e $\phi(\mathbf{p}) \leq 0$ se $p$ for vermelho.
+Portanto, nosso objetivo é descobrir como "montar" $\phi$. 
+A solução que propus foi utilizar uma reta que separasse ambos os conjuntos, como
+demonstrado na Figura 3.
+
+![**Figura 3**. Hiperplano que separa os conjuntos de pontos e a sua normal $w$. Observe que o produto interno de qualquer ponto na reta por $w$ é $0$.](linear_classifier.png width="80%")
+
+A reta é simplesmente uma maneira de dividir o espaço em dois.
+Ela é um [hiperplano](https://en.wikipedia.org/wiki/Hyperplane) do espaço dos nossos dados ($\mathcal{R}^2$).
+Um hiperplano (num espaço afim) é um subespaço vetorial que separa o seu ambiente em duas metades.
+No caso, a reta divide o plano $\mathcal{R}^2$ em dois, logo ela é um hiperplano de $\mathcal{R}^2$.
+Uma boa maneira de representar um hiperplano é através da sua normal ($\mathbf{w}$).
+Sua ilustração pode ser observada na Figura 3.
+A normal é um vetor ortogonal ao hiperplano.
+Então, o produto interno de qualquer ponto no hiperplano (reta) pela normal terá valor igual a zero.
+Tendo essa propriedade em mente, descrevemos a reta da seguinte forma:
+
+\begin{equation}
+\mathbf{p} \in \mathcal{R}^2, \mathbf{w} \cdot \mathbf{p} = 0.
+\end{equation}
+
+Ainda há um último problema.
+Se observarmos atentamente a Figura 3, veremos que poderíamos simplesmente ter escolhido
+$\mathbf{w}$ como um vetor na mesma direção e sentido oposto (-$\mathbf{w}$).
+No entanto, essa escolha tem a ver com o valor que desejamos para $\phi$.
+Se analisarmos os valores do produto interno de $\mathbf{w}$ por pontos em $\mathcal{R}^2$,
+veremos que os pontos que estão no lado azul, resultarão em valores positivos, enquanto
+os pontos do lado vermelho terã valores negativos.
+Isso condiz com a nossa definição de $\phi$: pontos de cor azul serão mapeados devem ter valores
+maiores positivos.
+
+Agora finalmente podemos definir $\phi$:
+\begin{equation}
+\phi(\mathbf{p}) = \mathbf{w} \mathbf{p}^T
+\end{equation}
+
 
 
 <!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style>
