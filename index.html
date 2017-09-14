@@ -23,7 +23,7 @@ with [Prof. Subhransu Maji](http://people.cs.umass.edu/~smaji/) and
 
 News
 ============================================================================================
-
+- (September 10th, 2017) We got _two_ papers accepted to 3DV 2017! (Check them below)
 - (July 20th, 2017) The [page](https://people.cs.umass.edu/~zlun/papers/SketchModeling/) for our paper _3D Shape Reconstruction from Sketches via Multi-view Convolutional Networks_ is online.
 - (July 19th, 2017) [Check](sppc/index.html) the page for our paper _Shape Generation using Spatially Partitioned Point Clouds_.
 - (July 4th, 2017) Our paper _Shape Generation using Spatially Partitioned Point Clouds_ has been accepted do BMVC 2017!
@@ -33,10 +33,28 @@ News
 Research
 ============================================================================================
 
-3D Shape Reconstruction from Sketches via Multi-view Convolutional Networks
+Unsupervised 3D Shape Induction from 2D Views of Multiple Objects (3DV 2017)
+----------------------------------------------------
+_**Matheus Gadelha**, Subhransu Maji, Rui Wang_
+
+![Learning to create shapes from images without any annotation.](prgan/fig/overview.png width="25%")
+Our approach called "Projective Generative Adversarial Networks" (PrGANs) trains a deep generative 
+model of 3D shapes whose projections match the distributions of the input 2D views. 
+The addition of a projection module allows us to infer the underlying 3D shape distribution without 
+using any 3D, viewpoint information, or annotation during the learning phase. 
+We show that our approach produces 3D shapes of comparable quality to GANs trained on 3D data 
+for a number of shape categories including chairs, airplanes, and cars. 
+Experiments also show that the disentangled representation of 2D shapes into geometry and viewpoint 
+leads to a good generative model of 2D shapes. 
+The key advantage is that our model allows us to predict 3D, viewpoint, and generate novel views 
+from an input image in a completely unsupervised manner.
+[[ArXiv](https://arxiv.org/pdf/1612.05872.pdf)]
+[[Project Page](prgan/index.html)]
+
+
+3D Shape Reconstruction from Sketches via Multi-view Convolutional Networks (3DV 2017 - _Oral_)
 ---------------------------------------------------------------------------
 _Zhaoliang Lun, **Matheus Gadelha**, Evangelos Kalogerakis, Subhransu Maji, Rui Wang_
-
 
 ![Shapes from sketches.](fig/sketch.png width="25%")
 We propose a method for reconstructing 3D shapes from 2D sketches in the form of line drawings. 
@@ -67,25 +85,6 @@ Furthermore, our method can easily incorporate other point attributes such as no
 an additional advantage over voxel-based representations.
 [[ArXiv](https://arxiv.org/abs/1707.06267)]
 [[Project Page](sppc/index.html)]
-
-
-3D Shape Induction from 2D Views of Multiple Objects
-----------------------------------------------------
-_**Matheus Gadelha**, Subhransu Maji, Rui Wang_
-
-![Learning to create shapes from images without any annotation.](prgan/fig/overview.png width="25%")
-Our approach called "Projective Generative Adversarial Networks" (PrGANs) trains a deep generative 
-model of 3D shapes whose projections match the distributions of the input 2D views. 
-The addition of a projection module allows us to infer the underlying 3D shape distribution without 
-using any 3D, viewpoint information, or annotation during the learning phase. 
-We show that our approach produces 3D shapes of comparable quality to GANs trained on 3D data 
-for a number of shape categories including chairs, airplanes, and cars. 
-Experiments also show that the disentangled representation of 2D shapes into geometry and viewpoint 
-leads to a good generative model of 2D shapes. 
-The key advantage is that our model allows us to predict 3D, viewpoint, and generate novel views 
-from an input image in a completely unsupervised manner.
-[[ArXiv](https://arxiv.org/pdf/1612.05872.pdf)]
-[[Project Page](prgan/index.html)]
 
 
 Discrete Image Descriptors
