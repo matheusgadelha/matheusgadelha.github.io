@@ -1,10 +1,11 @@
 																	**Matheus Gadelha**
 
 ![     ](fig/me.jpg width="25%")
-I am a PhD student at the [College of Information and Computer Sciences](https://www.cics.umass.edu/) in the
+I am a PhD candidate at the [College of Information and Computer Sciences](https://www.cics.umass.edu/) in the
 [University of Massachusetts - Amherst](https://www.cics.umass.edu/).
 Currently, I am working as a Research Assistant in the 
-[Computer Graphics Research Group](http://graphics.cs.umass.edu/) under the supervision of 
+[Computer Graphics Research Group](http://graphics.cs.umass.edu/) and in the
+[Computer Vision Lab](http://vis-www.cs.umass.edu/) under the supervision of 
 [Prof. Rui Wang](https://people.cs.umass.edu/~ruiwang/).
 
 Prior to joining UMass, I've obtained my bachelor's and master's degrees in Computer Science 
@@ -13,16 +14,17 @@ while working at IMAGINA Research Lab, under the supervision of Profs. Selan dos
 and Bruno Motta de Carvalho.
 
 I am interested in Computer Graphics, Vision and its intersections with Machine Learning.
-More recently, I've been working on image and shape synthesis through deep learning
+More recently, I've been working on 3D shape processing through deep learning
 with [Prof. Subhransu Maji](http://people.cs.umass.edu/~smaji/) and 
 [Prof. Rui Wang](https://people.cs.umass.edu/~ruiwang/).
 
-[[CV](cv.pdf)]
+[[CV](currentcv.pdf)]
 [[email](mgadelha@cs.umass.edu)]
 
 
 (#) News
 
+- (July 5th, 2018) Our paper _Multiresolution Tree Networks for Point Cloud Processing_ has been accepted do ECCV 2018!
 - (September 10th, 2017) We got _two_ papers accepted to 3DV 2017! (Check them below)
 - (July 20th, 2017) The [page](https://people.cs.umass.edu/~zlun/papers/SketchModeling/) for our paper _3D Shape Reconstruction from Sketches via Multi-view Convolutional Networks_ is online.
 - (July 19th, 2017) [Check](sppc/index.html) the page for our paper _Shape Generation using Spatially Partitioned Point Clouds_.
@@ -31,6 +33,27 @@ with [Prof. Subhransu Maji](http://people.cs.umass.edu/~smaji/) and
 - (December 18th, 2016) Our new paper _3D Shape Induction from 2D Views of Multiple Objects_ is on [ArXiv](https://arxiv.org/pdf/1612.05872.pdf).
 
 (#) Research
+
+(##) Multiresolution Tree Networks for Point Cloud Processing (ECCV 2018)
+
+_**Matheus Gadelha**, Rui Wang, Subhransu Maji_
+
+![Learning to create shapes from images without any annotation.](prgan/fig/overview.png width="25%")
+We present multiresolution tree-structured networks to process point clouds
+for 3D shape understanding and generation tasks. Our network represents a 3D
+shape as a set of locality-preserving 1D ordered list of points at multiple
+resolutions. This allows efficient feed-forward processing through 1D
+convolutions, coarse-to-fine analysis through a multi-grid architecture, and it
+leads to faster convergence and small memory footprint during training. The
+proposed tree-structured encoders can be used to classify shapes and outperform
+existing point-based architectures on shape classification benchmarks, while
+tree-structured decoders can be used for generating point clouds directly and
+they outperform existing approaches for image-to-shape inference tasks learned
+using the ShapeNet dataset. Our model also allows unsupervised learning of
+point-cloud based shapes by using a variational autoencoder, leading to
+higher-quality generated shapes.
+[[ArXiv - Coming soon]()]
+[[Project Page](mrt/index.html)]
 
 (##) Unsupervised 3D Shape Induction from 2D Views of Multiple Objects (3DV 2017)
 
