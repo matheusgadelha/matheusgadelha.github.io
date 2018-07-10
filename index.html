@@ -13,7 +13,7 @@ from [Federal University of Rio Grande do Norte](https://sistemas.ufrn.br/portal
 while working at IMAGINA Research Lab, under the supervision of Profs. Selan dos Santos 
 and Bruno Motta de Carvalho.
 
-I am interested in Computer Graphics, Vision and its intersections with Machine Learning.
+I am interested in Computer Graphics, Vision and their intersections with Machine Learning.
 More recently, I've been working on 3D shape processing through deep learning
 with [Prof. Subhransu Maji](http://people.cs.umass.edu/~smaji/) and 
 [Prof. Rui Wang](https://people.cs.umass.edu/~ruiwang/).
@@ -38,21 +38,16 @@ with [Prof. Subhransu Maji](http://people.cs.umass.edu/~smaji/) and
 
 _**Matheus Gadelha**, Rui Wang, Subhransu Maji_
 
-![Learning to create shapes from images without any annotation.](prgan/fig/overview.png width="25%")
+![Ordering and pooling induces multiple point cloud resolutions.](mrt/fig/smallabs.png width="25%")
 We present multiresolution tree-structured networks to process point clouds
 for 3D shape understanding and generation tasks. Our network represents a 3D
 shape as a set of locality-preserving 1D ordered list of points at multiple
 resolutions. This allows efficient feed-forward processing through 1D
 convolutions, coarse-to-fine analysis through a multi-grid architecture, and it
 leads to faster convergence and small memory footprint during training. The
-proposed tree-structured encoders can be used to classify shapes and outperform
-existing point-based architectures on shape classification benchmarks, while
-tree-structured decoders can be used for generating point clouds directly and
-they outperform existing approaches for image-to-shape inference tasks learned
-using the ShapeNet dataset. Our model also allows unsupervised learning of
-point-cloud based shapes by using a variational autoencoder, leading to
-higher-quality generated shapes.
-[[ArXiv - Coming soon]()]
+proposed tree-structured encoders can be used to classify shapes, while
+tree-structured decoders can be used for generating point clouds directly.
+[ArXiv - Coming soon]
 [[Project Page](mrt/index.html)]
 
 (##) Unsupervised 3D Shape Induction from 2D Views of Multiple Objects (3DV 2017)

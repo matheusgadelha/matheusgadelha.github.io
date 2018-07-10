@@ -1,0 +1,50 @@
+			**Multiresolution Tree Networks for 3D Point Cloud Processing**
+					[Matheus Gadelha](http://mgadelha.me), [Subhransu Maji](http://people.cs.umass.edu/~smaji/) and [Rui Wang](https://people.cs.umass.edu/~ruiwang/)
+					_University of Massachusetts - Amherst_
+
+							![](fig/abstract.png)
+
+We present multiresolution tree-structured networks to process point clouds for 3D shape understanding and generation tasks. 
+Our network represents a 3D shape as a set of locality-preserving 1D ordered list of points at multiple resolutions. 
+This allows efficient feed-forward processing through 1D convolutions, coarse-to-fine analysis through a multi-grid architecture, 
+and it leads to faster convergence and small memory footprint during training. 
+The proposed tree-structured encoders can be used to classify shapes and outperform existing point-based architectures on shape classification benchmarks, 
+while tree-structured decoders can be used for generating point clouds directly and they outperform existing approaches 
+for image-to-shape inference tasks learned using the ShapeNet dataset. 
+Our model also allows unsupervised learning of point-cloud based shapes by using a variational autoencoder, leading to higher-quality generated shapes.
+
+
+Shape Reconstruction
+==========================================================================================
+
+	![](fig/realrec.png)
+	![](fig/realrec2.png)
+
+
+Point Cloud VAE
+==========================================================================================
+
+	![](fig/gen.png)
+
+
+Point Correspondence
+==========================================================================================
+
+	![](fig/corresp.png)
+
+Shape Interpolation
+==========================================================================================
+
+	![](fig/interp.gif width="30%")
+
+Code
+============================================================================================
+
+_Coming soon..._
+
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js"></script><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+<style>
+h1:before, h2:before { content: none; }
+body{max-width: 900px}
+</style>
+
