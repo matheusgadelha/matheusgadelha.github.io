@@ -36,16 +36,17 @@ with [Prof. Subhransu Maji](http://people.cs.umass.edu/~smaji/) and
 (#) Research
 
 (##) A Deeper Look at 3D Shape Classifiers [ECCV 2018 - 3DRMS Workshop]
+
 _Jong-Chyi Su, **Matheus Gadelha**, Rui Wang, Subhransu Maji_
 
 ![Adversarial examples.](https://people.cs.umass.edu/~jcsu/papers/shape_recog/advers_examples.png width="25%")
 We investigate the role of representations and architectures for classifying 3D shapes in terms of their computational efficiency,
 generalization, and robustness to adversarial transformations.
-By varying the number of training examples and employing cross-modal transfer learning
-we study the role of initialization of existing deep architectures for 3D shape classification.
 Our analysis shows that multiview methods continue to offer the best generalization even without pretraining on
 large labeled image datasets, and even when trained on simplified inputs such as binary silhouettes.
-we analyze the robustness of 3D shape classifiers to adversarial transformations and present a novel approach for
+Furthermore, the performance of voxel-based 3D convolutional networks and point-based architectures can be improved
+via cross-modal transfer from image representations.
+Finally, we analyze the robustness of 3D shape classifiers to adversarial transformations and present a novel approach for
 generating adversarial perturbations of a 3D shape for multiview classifiers using a differentiable renderer
 [[ArXiv](https://arxiv.org/abs/1809.02560)]
 [[Project Page](https://people.cs.umass.edu/~jcsu/papers/shape_recog/)]
