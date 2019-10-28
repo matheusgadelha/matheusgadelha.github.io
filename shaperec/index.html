@@ -1,0 +1,82 @@
+			**Shape Reconstruction usind Differentiable Projections and Deep Priors**
+					[Matheus Gadelha](http://mgadelha.me), [Rui Wang](https://people.cs.umass.edu/~ruiwang/) and [Subhransu Maji](http://people.cs.umass.edu/~smaji/)
+					_University of Massachusetts - Amherst_
+
+							![](fig/abstract.png width="50%")
+
+We investigate the problem of reconstructing shapes from noisy and
+incomplete projections in the presence of viewpoint uncertainties.
+The problem is cast as an optimization over the shape given measurements obtained by a projection
+operator and a prior.
+We present differentiable projection operators for a number of
+reconstruction problems which when combined with the deep image
+prior or shape prior allows efficient inference through
+gradient descent.
+We apply our method on a variety of reconstruction problems, such as
+tomographic reconstruction from a few samples, visual hull
+reconstruction incorporating view uncertainties, and 3D shape
+reconstruction from noisy depth maps.
+Experimental results show that our approach is effective for such
+shape reconstruction problems, without requiring any task-specific
+training.
+
+		[**Paper**](dsp-paper.pdf) | [**Code**](https://github.com/matheusgadelha/ShapeRecDeepPrior)
+
+
+Tomographic Reconstruction
+==========================================================================================
+
+	![](fig/tomo.png width="70%")
+
+**Tomographic reconstruction results from sinograms** (radon transforms) sampled with n = 30 angles and noise (σ = 1).
+The sinogram is rescaled to the image size with nearest neighbor interpolation for visibility. From left to right in each row is the noise free
+image, the noisy sinogram, reconstruction with the filtered backprojection (FBP), TV prior, BM3D, and deep image prior. The SSIM and
+PSNR are shown for each approach on top of the corresponding figure.
+
+
+Shape-from-Silhouette 3D Reconstruction
+==========================================================================================
+
+	![](fig/silrec.png)
+
+**Shape-from-silhouette reconstruction using captured images**. For this glass object, we photographed 4 views, with 45 degree
+angle apart, against a uniform background color. We then applied background-color removal and converted each image to binary silhouette
+image. The first reconstructed model is the result using our deep prior, whereas the second is the result using the space carving baseline.
+
+
+	![](fig/silvp.png width=70%)
+
+**Shape-from-silhouette reconstruction with perturbed viewpoints**. Results for the space carving baseline in the first row, our
+method in the second row, ground-truth shapes in the third row. Our results are computed minimizing Equation 11 through 500 gradient
+descent steps. Our method is capable of updating the initial viewpoint parameters and is capable to recover from imprecise viewpoint
+assignment. The space carving baseline is not robust to viewpoint perturbations which means it ends up carving the wrong regions of the
+volume, leading to poor reconstructions and eliminating thin object structures.
+
+
+Shape-from-Depth 3D Reconstruction
+==========================================================================================
+
+	![](fig/deprec.png width=60%)
+
+**Effect of the amount of noise and number of views in the reconstruction**.
+On top, 3D shape reconstructed from very noisy (σ = 0.1) depth images of the same object.
+On the bottom, the same 3D shape reconstructed with 4 depth images and varying levels of noise.
+
+
+Citation
+==========================================================================================
+```
+@inProceedings{srdeepprior19,
+  title={Shape Reconstruction using Differentiable Projections and Deep Priors},
+  author = {Matheus Gadelha and Rui Wang and Subhransu Maji},
+  booktitle={ICCV},
+  year={2019}
+}
+```
+
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js"></script><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+<style>
+h1:before, h2:before { content: none; }
+body{max-width: 900px}
+</style>
+

@@ -15,11 +15,12 @@ while working at IMAGINA Research Lab, under the supervision of Profs. Selan dos
 and Bruno Motta de Carvalho.
 
 I am interested in Computer Graphics, Vision and their intersections with Machine Learning.
-More recently, I've been working on 3D shape processing through deep learning
+During my PhD, I've been working on various 3D vision problems using deep learning approaches
 with [Prof. Subhransu Maji](http://people.cs.umass.edu/~smaji/) and 
 [Prof. Rui Wang](https://people.cs.umass.edu/~ruiwang/).
 
 [[CV](currentcv.pdf)]
+[[Research Statement](ResearchStatement.pdf)]
 [[email](mgadelha@cs.umass.edu)]
 
 (#) Work Experience
@@ -35,6 +36,22 @@ with [Prof. Subhransu Maji](http://people.cs.umass.edu/~smaji/) and
 </br>
 
 (#) Research
+
+(##) Shape Reconstruction using Differentiable Projections and Deep Priors [ICCV 2019]
+
+_**Matheus Gadelha**, Rui Wang, Subhransu Maji_
+
+![Teapot reconstructed from silhouettes without any training.](shaperec/fig/abstract.png width="25%")
+We investigate the problem of reconstructing shapes from noisy and incomplete projections in the presence of viewpoint uncertainties. 
+The problem is cast as an optimization over the shape given measurements obtained by a projection operator and a prior. 
+We present differentiable projection operators for a number of reconstruction problems which when combined with the 
+deep image prior or shape prior allows efficient inference through gradient descent. 
+We apply our method on a variety of reconstruction problems, such as tomographic reconstruction from a few samples, 
+visual hull reconstruction incorporating view uncertainties, and 3D shape reconstruction from noisy depth maps. 
+Experimental results show that our approach is effective for such shape reconstruction problems, without requiring any task-specific training.
+[[Paper](shaperec/dsp_paper.pdf)]
+[[Project Page](shaperec/index.html)]
+
 
 (##) A Bayesian Perspective on the Deep Image Prior [CVPR 2019]
 
