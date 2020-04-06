@@ -1,0 +1,100 @@
+			**Learning Generative Models of Shape Handels**
+					[Matheus Gadelha](http://mgadelha.me)^1, [Giorgio Gori](https://haskha.github.io/)^2, [Duygu Ceylan](http://www.duygu-ceylan.com/)^2, [Radomir Mech](https://research.adobe.com/person/radomir-mech/)^2,
+					[Nathan Carr](https://research.adobe.com/person/nathan-carr/)^2, [Tamy Boubekeur](https://perso.telecom-paristech.fr/boubek/)^2, [Rui Wang](https://people.cs.umass.edu/~ruiwang/)^1, [Subhransu Maji](http://people.cs.umass.edu/~smaji/)^1
+					_University of Massachusetts - Amherst_^1							
+					_Adobe Research_^2
+
+							![](fig/overview.png)
+
+We present a generative model to synthesize 3D shapes as sets of handles -- lightweight proxies that approximate the original 3D shape -- 
+for applications in interactive editing, shape parsing, and building compact 3D representations. 
+Our model can generate handle sets with varying cardinality and different types of handles.
+Key to our approach is a deep architecture that predicts both the parameters and existence of shape handles, 
+and a novel similarity measure that can easily accommodate different types of handles, such as cuboids or sphere-meshes. 
+We leverage the recent advances in semantic 3D annotation as well as automatic shape summarizing techniques to supervise our approach. 
+We show that the resulting shape representations are intuitive and achieve superior quality than previous state-of-the-art.
+Finally, we demonstrate how our method can be used in applications such as interactive shape editing, completion, and interpolation, leveraging the latent space learned by our model to guide these tasks.
+
+		[**ArXiv paper**](#)
+
+
+Generation
+==========================================================================================
+
+	![](fig/abstract.png)
+
+We propose a class of generative models for synthesizing sets of handles – lightweight proxies that can be easily utilized for high-level tasks such as shape editing,
+parsing, animation etc. Our model can generate sets with different cardinality and is flexible to work with various types of
+handles, such as sphere-mesh handles (first and third figures) and cuboids (middle figure).
+
+
+Interpolation
+==========================================================================================
+
+	![](fig/interp.gif width="60%")
+
+Latent space interpolation Sets of handles can be
+interpolated by linearly interpolating the latent representation $z$.
+Transitions are smooth and generate plausible intermediate shapes.
+Notice that the interpolation not only changes handle parameters,
+but also adds new handles/removes existing handles as necessary.
+
+
+Shape Parsing
+==========================================================================================
+
+	![](fig/chairparsing.png)
+
+**Shape parsing on the chairs dataset**. From top
+to bottom, we show ground-truth shapes, results by Tulsiani et
+al., results by our method using sphere-mesh handles, and
+our method using cuboids handles. Note how our results (last two
+rows) are able to generate handles with much better details such
+as the stripes on the back of the chair (first column), legs on wheel
+chairs (second column) and armrests in several other columns.
+
+
+	![](fig/airanimalscomp.png)
+
+**Shape parsing on the airplanes and animals
+datasets**. From top to bottom, we show ground-truth shapes, re-
+sults by Tulsiani et al., results by Paschalidou et al., and
+results by our model trained using sphere-mesh handles. Our re-
+sults contain accurate geometric details, such as the engines on the
+airplanes and animal legs that are clearly separated.
+
+
+Editing and Completion
+==========================================================================================
+
+	![](fig/completion.png width="80%")
+
+**Handle completion**. Recovering full shape
+from incomplete set of handles. Using γ to control the complexity
+of the completed shape (left). Predicting a complete chair from a
+single handle (right).
+
+	![](fig/editing.png width="80%")
+
+**Editing chairs**. Given an initial set of handles, a
+user can modify any handle (yellow). Our model then updates the
+entire set of handles, resulting in a modified shape which observes
+the user edits while preserving the overall structure.
+
+Citation
+==========================================================================================
+```
+@inProceedings{shapehandles,
+  title={Learning Generative Models of Shape Handles},
+  author = {Matheus Gadelha and Giorgio Gori and Duygu Ceylan and Radomir Mech and Nathan Carr and Tamy Boubekeur and Rui Wang and Subhransu Maji},
+  booktitle={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2020}
+}
+```
+
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js"></script><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+<style>
+h1:before, h2:before { content: none; }
+body{max-width: 900px}
+</style>
+
