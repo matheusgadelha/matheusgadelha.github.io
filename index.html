@@ -43,6 +43,25 @@ with [Prof. Subhransu Maji](http://people.cs.umass.edu/~smaji/) and
 
 (#) Research
 
+(##) Deep Manifold Prior
+
+_**Matheus Gadelha**, Rui Wang, Subhransu Maji_
+
+![Manifold reconstruction without any training.](fig/dmp_snapshot.png width="25%")
+We present a prior for manifold structured data, such as surfaces of 3D shapes, where deep neural networks 
+are adopted to reconstruct a target shape using gradient descent starting from a random initialization.
+We show that surfaces generated this way are smooth, with limiting behavior characterized by Gaussian processes,
+and we mathematically derive such properties for fully-connected as well as convolutional networks.
+We demonstrate our method in a variety of manifold reconstruction applications,such as point cloud denoising
+and interpolation, achieving considerably better results against competitive 
+baselines while requiring no training data.
+We also show that when training data is available, our method allows developing
+alternate parametrizations of surfaces under the framework of AtlasNet, 
+leading to a compact network architecture and better reconstruction results on 
+standard image to shape reconstruction benchmarks.
+[[Paper](#)]
+
+
 (##) Learning Generative Models of Shape Handles [CVPR 2020]
 
 _**Matheus Gadelha**, Giorgio Gori, Duygu Ceylan, Radomir Mech, Nathan Carr, Tamy Boubekeur, Rui Wang, Subhransu Maji_
