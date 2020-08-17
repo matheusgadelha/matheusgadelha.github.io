@@ -1,0 +1,98 @@
+			**Label-Efficient Learning on Point Clouds using Approximate Convex Decompositions**
+					[Matheus Gadelha*](http://mgadelha.me), [Aruni RoyChowdhury*](https://arunirc.github.io/), [Gopal Sharma](https://hippogriff.github.io/), [Evangelos Kalogerakis](https://people.cs.umass.edu/~kalo/),
+					[Liangliang Cao](http://llcao.net/), [Erik Learned-Miller](https://people.cs.umass.edu/~elm/), [Rui Wang](https://people.cs.umass.edu/~ruiwang/), [Subhransu Maji](http://people.cs.umass.edu/~smaji/)
+								_University of Massachusetts - Amherst_						
+
+								![Presentation (8 min)](https://www.youtube.com/watch?v=LZn_TPcxWcM)
+
+The problems of shape classification and part segmentation
+from 3D point clouds have garnered increasing attention in the last few
+years. Both of these problems, however, suffer from relatively small training sets, 
+creating the need for statistically efficient methods to learn
+3D shape representations. In this paper, we investigate the use of Approximate 
+Convex Decompositions (ACD) as a self-supervisory signal
+for label-efficient learning of point cloud representations. We show that
+using ACD to approximate ground truth segmentation provides excellent self-supervision 
+for learning 3D point cloud representations that are
+highly effective on downstream tasks. We report improvements over the
+state-of-the-art for unsupervised representation learning on the ModelNet40 
+shape classification dataset and significant gains in few-shot part
+segmentation on the ShapeNetPart dataset.
+
+		[**ArXiv paper**](https://arxiv.org/pdf/2003.13834.pdf) |  [**Code**](https://github.com/matheusgadelha/PointCloudLearningACD)
+
+
+Overview
+==========================================================================================
+
+							![](fig/overview.png)
+
+**Top**: Approximate Convex Decomposition (ACD) can be applied on a large repository of unlabeled point clouds, 
+yielding a self-supervised training signal for the neural network without involving any human annotators. 
+**Bottom**: the usual fully-supervised setting, where human annotators label the semantic parts of shapes, 
+which are then used as supervision for the neural network. The unsupervised ACD task results in learning 
+useful representations from unlabeled data, significantly improving performance in shape classification 
+and semantic segmentation, especially when labeled data is scarce or unavailable.
+
+
+Approximate Convex Decomposition
+==========================================================================================
+
+	![](fig/acd.png)
+
+Input point clouds (first row), convex components automatically computed by ACD (second row) and 
+human-labeled point clouds (last row) from the ShapeNet part segmentation benchmark.
+Note -- (i) different colors for the ACD components only signify different parts -- no semantic meaning 
+or inter-shape correspondence is inferred by this procedure; 
+(ii) for the human labels, colors do convey 
+semantic meaning: e.g., the backs of chairs are always orange; 
+(iii) while the ACD decompositions tend to oversegment the shapes, they contain most of the boundaries 
+present in the human annotations, suggesting that the model has similar criteria for decomposing objects into subparts; 
+e.g., the chair’s legs are separated from the seat, wings and engines are separated from the airplane boundary, 
+pistol trigger is separated from the rest.
+
+
+Few-Shot Part Segmentation
+==========================================================================================
+
+	![](fig/fewshotseg.png width="50%")
+
+	![](fig/segshapes.png)
+
+Qualitative comparison on 5-shot ShapeNet part segmentation. 
+The baseline method in the first row corresponds to training using only 5 examples per class, 
+whereas the ACD results in the second row were computed by performing joint training (cross-entropy from 
+5 examples + contrastive loss over ACD components from ShapeNetCore). 
+The network backbone architecture is the same for both approaches – PointNet++. 
+The baseline method merges parts that should be separated, e.g., engines of the airplane, 
+details of the rocket, top of the table, and seat of the motorcycle.
+
+
+Unsupervised Shape Classification
+==========================================================================================
+
+	![](fig/classification.png width="60%")
+
+Unsupervised shape classification on the ModelNet40 dataset. 
+The representations learned in the intermediate layers by a network trained for the ACD task 
+on ShapeNet data are general enough to be useful for discriminating between shape categories 
+on ModelNet40.
+
+
+Citation
+==========================================================================================
+```
+@inProceedings{selfsupacd,
+  title={Label-Efficient Learning on Point Clouds using Approximate Convex Decompositions},
+  author = {Matheus Gadelha and Aruni RoyChowdhury and Gopal Sharma and Evangelos Kalogerakis and Liangliang Cao and Erik Learned-Miller and Rui Wang and Subhransu Maji},
+  booktitle={European Conference on Computer Vision (ECCV)},
+  year={2020}
+}
+```
+
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js"></script><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+<style>
+h1:before, h2:before { content: none; }
+body{max-width: 900px}
+</style>
+
