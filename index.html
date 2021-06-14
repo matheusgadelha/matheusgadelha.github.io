@@ -1,25 +1,25 @@
 																	**Matheus Gadelha**
 
 ![     ](fig/me.jpg width="27%")
+_I will be joining Adobe as Research Scientist in June, 2021._
+
 I received my PhD from [University of Massachusetts - Amherst](https://www.cics.umass.edu/)
 while being supervised by [Prof. Rui Wang](https://people.cs.umass.edu/~ruiwang/) and 
 [Prof. Subhransu Maji](http://people.cs.umass.edu/~smaji/).
-_I will be joining Adobe as Research Scientist in June, 2021._
+I am interested in Computer Graphics, Vision and their intersections with Machine Learning.
+My work is focused on models and representations of tridimensional data for
+both discriminative and generative models with a particular interest in learning them directly from images.
+Check my Research Statement below for a more detailed overview.
 
 Prior to joining UMass, I've obtained my bachelor's and master's degrees in Computer Science 
 from [Federal University of Rio Grande do Norte](https://sistemas.ufrn.br/portal/PT/), 
-while working with Profs. Selan dos Santos and Bruno Motta de Carvalho.
+while working with Prof. Selan dos Santos and Prof. Bruno Motta de Carvalho.
 
-I am broadly interested in Computer Graphics, Vision and their intersections with Machine Learning.
-My work is focused on models and representations of tridimensional data for
-both discriminative and generative models with a particular interested in learning directly from images.
-Check my Research Statement below for a more descriptive overview of the work I did during
-my PhD.
 
-**Internships for PhD students: ** If you are interested in similar problems to the ones I've mentioned above (or anything
+**Internships for PhD students: ** If you are interested in related areas to the ones I've mentioned above (or anything
 related to my previous research), don't be shy and send me an e-mail with your CV and a short
 description of the problems you are interested in working on. We are always looking for talented
-interns to join us at Adobe Research for summer internships (winter in the South hemisphere...).
+interns to join us at Adobe Research for summer internships (winter in the southern hemisphere...).
 
 **Pro-bono mentoring: ** If you belong to an [underrepresented group in STEM](https://en.wikipedia.org/wiki/Underrepresented_group),
 I am more than happy to talk to you and provide any help I can regarding your career.
@@ -32,6 +32,7 @@ research directions you might be interested in pursuing, and so on.
 [[Research Statement](ResearchStatement.pdf)]
 [[Twitter](https://twitter.com/gadelha_m)]
 [[email](matheusabrantesgadelha@gmail.com)]
+[[scholar](https://scholar.google.com/citations?user=VhqmvXsAAAAJ&hl=en)]
 
 (#) Work Experience
 
@@ -54,200 +55,161 @@ research directions you might be interested in pursuing, and so on.
 
 (#) Research
 
-(##) Label-Efficient Learning on Point Clouds using Approximate Convex Decompositions [ECCV 2020]
+![ ](fig/prgan_journal.png width="20%")
+[IJCV 2020]
+
+**Inferring 3D Shapes from Image Collections using Adversarial Networks**
+
+_**Matheus Gadelha**, Aartika Rai, Rui Wang, Subhransu Maji_
+
+[[Journal](https://link.springer.com/article/10.1007/s11263-020-01335-w)]
+[[Pre-print](https://arxiv.org/abs/1906.04910)]
+
+-----
+
+![ ](fig/acd.png width="20%")
+[ECCV 2020]
+
+**Label-Efficient Learning on Point Clouds using Approximate Convex Decompositions**
 
 _**Matheus Gadelha**`*`, Aruni RoyChowdhury`*`, Gopal Sharma, Evangelos Kalogerakis, Liangliang Cao, Erik Learned-Miller, Rui Wang, Subhransu Maji_
 
-![ACD as self-supervised task for point cloud learning.](fig/acd.png width="25%")
-The problems of shape classification and part segmentation
-from 3D point clouds have garnered increasing attention in the last few
-years. But both of these problems suffer from relatively small training sets, creating the need for statistically efficient methods to learn
-3D shape representations. In this work, we investigate the use of Approximate Convex Decompositions (ACD) as a self-supervisory signal
-for label-efficient learning of point cloud representations. We show that using the results of ACD to approximate a ground truth segmentation provides
-excellent self-supervision for learning 3D point cloud representations that are highly effective
-on downstream tasks. We report improvements over the state-of-theart in unsupervised representation learning on the ModelNet40 shape
-classification dataset and significant gains in few-shot part segmentation
-on the ShapeNetPart dataset.
 [[Paper](https://arxiv.org/pdf/2003.13834.pdf)]
 [[Project Page](selfsupacd/index.html)]
 
-(##) Deep Manifold Prior
+-----
+
+
+![ ](fig/dmp_snapshot.png width="20%")
+**Deep Manifold Prior**
 
 _**Matheus Gadelha**, Rui Wang, Subhransu Maji_
 
-![Manifold reconstruction without any training.](fig/dmp_snapshot.png width="25%")
 **Best poster honorable mention at [NECV](http://visual.cs.brown.edu/workshops/necv2019/)**.
-We present a prior for manifold structured data, such as surfaces of 3D shapes, where deep neural networks 
-are adopted to reconstruct a target shape using gradient descent starting from a random initialization.
-We show that surfaces generated this way are smooth, with limiting behavior characterized by Gaussian processes,
-and we mathematically derive such properties for fully-connected as well as convolutional networks.
-We demonstrate our method in a variety of manifold reconstruction applications,such as point cloud denoising
-and interpolation, achieving considerably better results against competitive 
-baselines while requiring no training data.
-We also show that when training data is available, our method allows developing
-alternate parametrizations of surfaces under the framework of AtlasNet, 
-leading to a compact network architecture and better reconstruction results on 
-standard image to shape reconstruction benchmarks.
+
 [[Paper](https://arxiv.org/pdf/2004.04242.pdf)]
 
 
-(##) Learning Generative Models of Shape Handles [CVPR 2020]
+-----
+
+![ ](shapehandles/fig/snapshot.png width="20%")
+[CVPR 2020]
+
+**Learning Generative Models of Shape Handles**
 
 _**Matheus Gadelha**, Giorgio Gori, Duygu Ceylan, Radomir Mech, Nathan Carr, Tamy Boubekeur, Rui Wang, Subhransu Maji_
 
-![Shapes generated as sets of cuboids and sphere-meshes.](shapehandles/fig/snapshot.png width="25%")
-We present a generative model to synthesize 3D shapes as sets of handles -- lightweight proxies that approximate the original 3D shape -- 
-for applications in interactive editing, shape parsing, and building compact 3D representations. 
-Our model can generate handle sets with varying cardinality and different types of handles.
-Key to our approach is a deep architecture that predicts both the parameters and existence of shape handles, 
-and a novel similarity measure that can easily accommodate different types of handles, such as cuboids or sphere-meshes. 
-We show that the resulting shape representations are intuitive and achieve superior quality than previous state-of-the-art.
-Finally, we demonstrate how our method can be used in applications such as interactive shape editing, completion, and interpolation, leveraging the latent space learned by our model to guide these tasks.
+
 [[Project Page](shapehandles/index.html)]
 
+-----
 
-(##) Shape Reconstruction with Differentiable Projections and Deep Priors [ICCV 2019]
+
+![ ](shaperec/fig/abstract.png width="20%")
+[ICCV 2019]
+
+**Shape Reconstruction with Differentiable Projections and Deep Priors **
 
 _**Matheus Gadelha**, Rui Wang, Subhransu Maji_
 
-![Teapot reconstructed from silhouettes without any training.](shaperec/fig/abstract.png width="25%")
-We investigate the problem of reconstructing shapes from noisy and incomplete projections in the presence of viewpoint uncertainties. 
-The problem is cast as an optimization over the shape given measurements obtained by a projection operator and a prior. 
-We present differentiable projection operators for a number of reconstruction problems which when combined with the 
-deep image prior or shape prior allows efficient inference through gradient descent. 
-We apply our method on a variety of reconstruction problems, such as tomographic reconstruction from a few samples, 
-visual hull reconstruction incorporating view uncertainties, and 3D shape reconstruction from noisy depth maps. 
-Experimental results show that our approach is effective for such shape reconstruction problems, without requiring any task-specific training.
 [[Paper](shaperec/dsp_paper.pdf)]
 [[Project Page](shaperec/index.html)]
 
 
-(##) A Bayesian Perspective on the Deep Image Prior [CVPR 2019]
+-----
+
+![ ](fig/bayesdip.png width="20%")
+[CVPR 2019]
+
+**A Bayesian Perspective on the Deep Image Prior **
 
 _Zezhou Cheng, **Matheus Gadelha**, Subhransu Maji, Daniel Sheldon_
 
-![Denoising using SGLD vs. SGD.](fig/bayesdip.png width="30%")
-The [deep image prior](https://dmitryulyanov.github.io/deep_image_prior) was recently introduced as a prior for natural images. 
-It represents images as the output of a convolutional network with random inputs. 
-We show that the deep image prior is asymptotically equivalent to a stationary Gaussian process 
-prior in the limit as the number of channels in each layer of the network goes to infinity, and derive the corresponding kernel. 
-This informs a Bayesian approach to inference. 
-We show that by conducting posterior inference using stochastic gradient Langevin we avoid the need for early stopping, 
-which is a drawback of the current approach, and improve results for denoising and impainting tasks. 
-[[ArXiv](https://arxiv.org/abs/1904.07457)]
+[[Paper](https://arxiv.org/abs/1904.07457)]
 [[Project Page](https://people.cs.umass.edu/~zezhoucheng/gp-dip/)]
 
+-----
 
-(##) A Deeper Look at 3D Shape Classifiers [ECCV 2018 - 3DRMS Workshop]
+![ ](https://people.cs.umass.edu/~jcsu/papers/shape_recog/advers_examples.png width="20%")
+[ECCV 2018 - 3DRMS Workshop]
+
+**A Deeper Look at 3D Shape Classifiers **
 
 _Jong-Chyi Su, **Matheus Gadelha**, Rui Wang, Subhransu Maji_
 
-![Adversarial examples.](https://people.cs.umass.edu/~jcsu/papers/shape_recog/advers_examples.png width="25%")
-We investigate the role of representations and architectures for classifying 3D shapes in terms of their computational efficiency,
-generalization, and robustness to adversarial transformations.
-Our analysis shows that multiview methods continue to offer the best generalization even without pretraining on
-large labeled image datasets, and even when trained on simplified inputs such as binary silhouettes.
-Furthermore, the performance of voxel-based 3D convolutional networks and point-based architectures can be improved
-via cross-modal transfer from image representations.
-Finally, we analyze the robustness of 3D shape classifiers to adversarial transformations and present a novel approach for
-generating adversarial perturbations of a 3D shape for multiview classifiers using a differentiable renderer
-[[ArXiv](https://arxiv.org/abs/1809.02560)]
+[[Paper](https://arxiv.org/abs/1809.02560)]
 [[Project Page](https://people.cs.umass.edu/~jcsu/papers/shape_recog/)]
 
-(##) Multiresolution Tree Networks for Point Cloud Processing [ECCV 2018]
+</br>
+
+-----
+
+![ ](mrt/fig/smallabs.png width="20%")
+[ECCV 2018]
+
+**Multiresolution Tree Networks for Point Cloud Processing **
 
 _**Matheus Gadelha**, Rui Wang, Subhransu Maji_
 
-![Ordering and pooling induces multiple point cloud resolutions.](mrt/fig/smallabs.png width="25%")
-We present multiresolution tree-structured networks to process point clouds
-for 3D shape understanding and generation tasks. Our network represents a 3D
-shape as a set of locality-preserving 1D ordered list of points at multiple
-resolutions. This allows efficient feed-forward processing through 1D
-convolutions, coarse-to-fine analysis through a multi-grid architecture, and it
-leads to faster convergence and small memory footprint during training. The
-proposed tree-structured encoders can be used to classify shapes, while
-tree-structured decoders can be used for generating point clouds directly.
-[[ArXiv](https://arxiv.org/abs/1807.03520)]
+[[Paper](https://arxiv.org/abs/1807.03520)]
 [[Project Page](mrt/index.html)]
 
-(##) Unsupervised 3D Shape Induction from 2D Views of Multiple Objects [3DV 2017]
+</br>
+
+-----
+
+![ ](prgan/fig/overview.png width="20%")
+[3DV 2017]
+
+**Unsupervised 3D Shape Induction from 2D Views of Multiple Objects **
 
 _**Matheus Gadelha**, Subhransu Maji, Rui Wang_
 
-![Learning to create shapes from images without any annotation.](prgan/fig/overview.png width="25%")
-Our approach called "Projective Generative Adversarial Networks" (PrGANs) trains a deep generative 
-model of 3D shapes whose projections match the distributions of the input 2D views. 
-The addition of a projection module allows us to infer the underlying 3D shape distribution without 
-using any 3D, viewpoint information, or annotation during the learning phase. 
-We show that our approach produces 3D shapes of comparable quality to GANs trained on 3D data 
-for a number of shape categories including chairs, airplanes, and cars. 
-Experiments also show that the disentangled representation of 2D shapes into geometry and viewpoint 
-leads to a good generative model of 2D shapes. 
-The key advantage is that our model allows us to predict 3D, viewpoint, and generate novel views 
-from an input image in a completely unsupervised manner.
-[[ArXiv](https://arxiv.org/pdf/1612.05872.pdf)]
+[[Paper](https://arxiv.org/pdf/1612.05872.pdf)]
 [[Project Page](prgan/index.html)]
 
+</br>
 
-(##) 3D Shape Reconstruction from Sketches via Multi-view Convolutional Networks [3DV 2017 - _Oral_]
+-----
+
+![ ](fig/sketch.png width="20%")
+[3DV 2017]
+
+**3D Shape Reconstruction from Sketches via Multi-view Convolutional Networks **
 
 _Zhaoliang Lun, **Matheus Gadelha**, Evangelos Kalogerakis, Subhransu Maji, Rui Wang_
 
-![Shapes from sketches.](fig/sketch.png width="25%")
-We propose a method for reconstructing 3D shapes from 2D sketches in the form of line drawings. 
-Our method takes as input a single sketch, or multiple sketches, 
-and outputs a dense point cloud representing a 3D reconstruction of the input sketch(es). 
-The point cloud is then converted into a polygon mesh. 
-Based on our experiments, compared to other methods, such as volumetric networks, 
-our architecture offers several advantages, including more faithful reconstruction, 
-higher output surface resolution, better preservation of topology and shape structure.
 [[ArXiv](https://arxiv.org/abs/1707.06375)]
 [[Project Page](https://people.cs.umass.edu/~zlun/papers/SketchModeling/)]
 
+-----
 
-(##) Shape Generation using Spatially Partitioned Point Clouds [BMVC 2017]
+![ ](sppc/fig/airplanes_sorting_new2.png width="20%")
+[BMVC 2017]
+
+**Shape Generation using Spatially Partitioned Point Clouds **
 
 _**Matheus Gadelha**, Subhransu Maji, Rui Wang_
 
-![_kd-tree_ sorted Point Clouds.](sppc/fig/airplanes_sorting_new2.png width="25%")
-We propose a method to generate 3D shapes using point clouds. 
-Given a point-cloud representation of a 3D shape, our method builds a _kd-tree_ to spatially partition the points. 
-This orders them consistently across all shapes, resulting in reasonably good correspondences across all shapes. 
-We then use PCA analysis to derive a linear shape basis and optimize the point ordering 
-by iteratively minimizing the PCA reconstruction error. 
-We propose to use the expressive power of neural networks to learn a distribution over the shape coefficients in a generative-adversarial framework. 
-Compared to 3D shape generative models trained on voxel-representations, 
-our point-based method is considerably more light-weight and scalable, with little loss of quality. 
-Furthermore, our method can easily incorporate other point attributes such as normal and color information, 
-an additional advantage over voxel-based representations.
 [[ArXiv](https://arxiv.org/abs/1707.06267)]
 [[Project Page](sppc/index.html)]
 
+(#) Reviewing
 
-(##) Discrete Image Descriptors [ICPR 2014]
+I worked/am working as a reviewer for the following venues:
 
-_**Matheus Gadelha**, Bruno Motta_
-
-Computing descriptors for image features is a crucial task in many applications. 
-A good feature descriptor is capable of providing invariance to geometric and lightning transformations 
-while consuming as few memory as possible. 
-Binary descriptors only store a single bit per pixel comparison, and an useful portion of information, 
-about how large the difference of intensity is, is lost due to this quantization. 
-This work proposes a generalization of the binary descriptor idea: the discrete descriptor called DRINK. 
-Using this idea, we are able to use more information related to the intensity difference while 
-preserving the speed of the original binary descriptor.
-[[code](https://github.com/matheusgadelha/DRINK)]
+CVPR 2018-2021 (**2021 outstanding reviewer**), ICCV 2019-2021, ECCV 2018-2021, ICLR 2021,
+TPAMI (2018, 2021), Computer and Graphics 2018, SIGGRAPH Asia 2018, Pacific Graphics 2019.
 
 
-
-(#) Projects
+(#) Open Source
 
 (##) Interactive Mesh Deformation w/ ARAP Surface Modeling
 
 ![As Rigid as Possible Interactive Demo](https://www.youtube.com/watch?v=QUtpoybhYA8)
 Implementation of the ARAP Surface Modeling paper. 
 It includes a software to deform any mesh, applying the computed transformation in real time. 
-It was coded in C++ with Eigen library and OpenGL.
+Made using C++ with Eigen and OpenGL.
 [[code](https://github.com/matheusgadelha/Pintar)]
 
 (##) Rigid Body Simulation
@@ -274,9 +236,6 @@ CSP solver includes an efficient sudoku solver example.
 [[A* code](https://github.com/matheusgadelha/AStar)]
 [[CSP code](https://github.com/matheusgadelha/CSPSolver)]
 
-<style>
-h1:before, h2:before { content: none; }
-</style>
 <!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js" charset="utf-8"></script><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js" charset="utf-8"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
 
 <script>
