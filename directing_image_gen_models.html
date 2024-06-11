@@ -16,14 +16,13 @@ hard to express *specific* visual concepts with them.
 Thus, we developed *Continous 3D Words* -- a vocabulary of "words" that can be interpreted by image diffusion models to describe continous
 concepts like object orientation, illumination and even the pose of deformable entities (e.g. dogs, birds, etc).
 Remarkably, these concepts need very little data to be learned -- a single 3D mesh suffices.
-We also went deeper into the inner workings of the large image diffusion models to apply them to generate animations..
+We also went deeper into the inner workings of the large image diffusion models used apply them to create animations from 3D data + text.
 Our work shows that one can manipulate the attention mechanisms while generating multiple frames to get consistent results
 *without any additional training*.
-This, of course, requires additional information: inter-frame correspondences and coarse 3D geometry.
-Using that information we can modify the backwards diffusion process to "render" coarse 3D animations into consistent videos.
+Using the 3D information we can modify the backwards diffusion process to "render" coarse 3D animations into consistent videos.
 In other words, we use the image generative model as an "AI renderer".
 We called this technique *Generative Rendering*.
-Finally, we also explored how to use these image models to edit existing imagery by moving objects in a 3D-aware manner.
+Finally, we also explored how the same image models to edit existing imagery by moving objects in a 3D-aware manner.
 In this scenario, we employed off-the-shelf depth estimation models to lift the image pixels to 3D where the user can perform
 editing operations in a tridimensional space.
 After editing is complete, associated features can be projected back to the image plane and used as guidance in a backwards
@@ -32,7 +31,7 @@ diffusion process to generate the final image.
 !!! 
    All these works were the result of great collaborations with partners in academia and were led by
    talented graduate students who spent their summer at Adobe working with us during their internships.
-   Please check the project pages referenced below for more information about the projects.
+   Please check the project pages referenced below for more information.
 
 (##) Continuous 3D Words
 
