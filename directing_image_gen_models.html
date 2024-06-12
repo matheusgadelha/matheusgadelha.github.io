@@ -1,8 +1,8 @@
                     **Directing Image Generative Models**
                               [Matheus Gadelha](http:/mgadelha.me)
-                              _Latest update: June 10th, 2024_
+                              _Latest update: June 12th, 2024_
 
-During the last few years we have witnessed an impressive rise on the quality of computer generated imagery.
+During the last few years we have witnessed an impressive rise in the quality of computer generated imagery.
 The most popular models are usually trained to perform "text-to-image" tasks -- given a text prompt, create an image that matches the description.
 While being a delightful experience, it is notoriously hard to create exactly the type of imagery we have in our minds.
 While already useful, I think we have just started to explore the potential of this machinery.
@@ -13,10 +13,10 @@ This write-up explores three different ways in which our research expanded our a
 First, we start by challenging what "words" mean in image generative models.
 Sure, they are very convenient for someone that simply wants to get some image without too much work, but it becomes increasingly
 hard to express *specific* visual concepts with them.
-Thus, we developed *Continous 3D Words* -- a vocabulary of "words" that can be interpreted by image diffusion models to describe continous
-concepts like object orientation, illumination and even the pose of deformable entities (e.g. dogs, birds, etc).
+Thus, we developed *Continous 3D Words* -- a vocabulary of "words" that can be interpreted by image diffusion models to describe continuous
+concepts like object orientation, illumination, and even the pose of deformable entities (e.g. dogs, birds, etc).
 Remarkably, these concepts need very little data to be learned -- a single 3D mesh suffices.
-We also went deeper into the inner workings of the large image diffusion models used apply them to create animations from 3D data + text.
+We also went deeper into the inner workings of the large image diffusion models used to apply them to create animations from 3D data + text.
 Our work shows that one can manipulate the attention mechanisms while generating multiple frames to get consistent results
 *without any additional training*.
 Using the 3D information we can modify the backwards diffusion process to "render" coarse 3D animations into consistent videos.
@@ -43,7 +43,7 @@ from a small set of pictures containing a specific object one can learn a "word"
 model.
 However, sometimes we are not interested in generating a specific subject, but a more general concept.
 For example, it would be nice to learn a specific word that was capable of describing the position of the sun in an image.
-More than that, we would like to have some _continous control_ of the sun's position so we could precisely control the lighting of the scene.
+More than that, we would like to have some _continuous control_ of the sun's position so we could precisely control the lighting of the scene.
 
 ![ ](fig/cont_words_method.jpeg)
 
@@ -67,23 +67,23 @@ The Figure below shows some examples of the concepts we were able to control usi
 !!! Tip
    Project page: https://primecai.github.io/generative_rendering/
 
-The main challenge in gerating animations when using image diffusion models is the consistency between frames.
-In this work, we propose to improve the inter-frame consistenct by leveraging the existing information in a 3D animation
-used to control the generative process.
+The main challenge in generating animations when using image diffusion models is the consistency between frames.
+In this work, we propose to improve the inter-frame consistency by leveraging the existing information in a 3D animation
+to control the generative process.
 In other words, given a 3D animation without any texture, material or illumination, our goal is to "render" a consistent RGB
 animation guided by a text prompt.
 See the vide below for an example of input/output of this method.
 
 ![ ](fig/genrendering_results.gif)
 
-Notice how simply generating every frame indenpendtly (second column) yields "flickery" results with visually unpleasent artifacts.
-Our approach (last column) significantly amelliorates this issue *without resorting to any additional training* -- everything is
+Notice how simply generating every frame independently (second column) yields "flickery" results with visually unpleasant artifacts.
+Our approach (last column) significantly ameliorates this issue *without resorting to any additional training* -- everything is
 done by simple modifications to the denoising process itself.
 
 ![ ](fig/genredering_method.png)
 
-Our system takes as input a set of UV and depths maps rendered from an user-provided animated 3D scene.
-We use a depth-conditioned ControlNet to generate corresponding frames UV correspondences to preserve the consistency.
+Our system takes as input a set of UV and depths maps rendered from a user-provided animated 3D scene.
+We use a depth-conditioned ControlNet to generate corresponding frames with UV correspondences to preserve the consistency.
 We initialize the noise in the UV space of each object which we then render into each image.
 For each backwards diffusion step, we first use extended attention for a set of keyframes and extract their pre- and post-attention features
 (more information about those in the paper).
@@ -121,7 +121,7 @@ depth $d'$.
 The lifted activations are projected back to the image plane creating a new 2D activation map $\Psi'$.
 Finally, $d^\prime$ and $\Psi^\prime$ are used to guide the diffusion model and generate the final edited image.
 Additional results are shown below.
-Dotted axis corresponds to the new object positition and orientation.
+Dotted axes correspond to the new object positition and orientation.
 
 ![ ](fig/diffhandles_results.png)
 
