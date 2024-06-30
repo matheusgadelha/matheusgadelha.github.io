@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="css/pico.min.css">
+    <title>Matheus Gadelha</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+      .float-right {{
+        float: right;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+        max-width: 300px;
+      }}
+
+      .float-left {{
+        float: left;
+        block: block;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        max-width: 150px;
+      }}
+
+      article {{
+        overflow: hidden;
+      }}
+
+      footer {{
+        clear: both;
+      }}
+
+      @media (max-width: 768px) {{
+        .float-right {{
+          float: none;
+          display: block;
+          margin: 0 auto 1rem auto;
+          max-width: 100%;
+        }}
+
+        .float-left {{
+          float: none;
+          display: block;
+          margin: 0 auto 1rem auto;
+          max-width: 100%;
+        }}
+      }}
+    </style>
+  </head>
+  <body>
+
+    <main class="container">
+      <nav>
+        <ul>
+          <li><strong>Personal Website</strong></li>
+        </ul>
+        <ul>
+          <li><a href="#info">Info</a></li>
+          <li><a href="#papers">Papers</a></li>
+          <li><a href="#service">Service</a></li>
+          <li><a href="#experience">Experience</a></li>
+        </ul>
+      </nav>
+      <h1 id="info">Matheus Gadelha</h1>
+
+      <img src="fig/me.jpg" alt="Matheus Gadelha" class="float-right">
+      {presentation}
+
+      <h2 id="papers">Papers</h2>
+      {papers}
+
+      <h2 id="service">Service</h2>
+      {service}
+
+      <h2 id="experience">Professional Experience</h2>
+      {experience}
+
+    </main>
+  </body>
+</html>

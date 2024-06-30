@@ -1,411 +1,350 @@
-																	**Matheus Gadelha**
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="css/pico.min.css">
+    <title>Matheus Gadelha</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+      .float-right {
+        float: right;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+        max-width: 300px;
+      }
 
-![     ](fig/me.jpg width="25%")
-I am currently a Research Scientist at [Adobe Research](https://research.adobe.com/).
-I received my PhD from [University of Massachusetts - Amherst](https://www.cics.umass.edu/)
-while being supervised by [Prof. Rui Wang](https://people.cs.umass.edu/~ruiwang/) and 
-[Prof. Subhransu Maji](http://people.cs.umass.edu/~smaji/).
+      .float-left {
+        float: left;
+        block: block;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        max-width: 150px;
+      }
+
+      article {
+        overflow: hidden;
+      }
+
+      footer {
+        clear: both;
+      }
+
+      @media (max-width: 768px) {
+        .float-right {
+          float: none;
+          display: block;
+          margin: 0 auto 1rem auto;
+          max-width: 100%;
+        }
+
+        .float-left {
+          float: none;
+          display: block;
+          margin: 0 auto 1rem auto;
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <main class="container">
+      <nav>
+        <ul>
+          <li><strong>Personal Website</strong></li>
+        </ul>
+        <ul>
+          <li><a href="#info">Info</a></li>
+          <li><a href="#papers">Papers</a></li>
+          <li><a href="#service">Service</a></li>
+          <li><a href="#experience">Experience</a></li>
+        </ul>
+      </nav>
+      <h1 id="info">Matheus Gadelha</h1>
+
+      <img src="fig/me.jpg" alt="Matheus Gadelha" class="float-right">
+      <p>I am currently a Research Scientist at <a href="https://research.adobe.com/">Adobe Research</a>.
+I received my PhD from <a href="https://www.cics.umass.edu/">University of Massachusetts - Amherst</a>
+while being supervised by <a href="https://people.cs.umass.edu/~ruiwang/">Prof. Rui Wang</a> and 
+<a href="http://people.cs.umass.edu/~smaji/">Prof. Subhransu Maji</a>.
 I am interested in Computer Graphics, Vision and their intersections with Machine Learning.
 My work is focused on models and representations of tridimensional data for
-both discriminative and generative models.
-
-Lately, I have been particularly interested in mechanisms to incorporate 3D capabilities into
+both discriminative and generative models.</p>
+<p>Lately, I have been particularly interested in mechanisms to incorporate 3D capabilities into
 large generative models so we can properly control them and robustly create/understand
 3D data. I am also broadly interested in techniques (not necessarily ML-based) that allow us
-to better manipulate and author 3D content.
-
-Latest on my research:
-* [Directing Image Generative Models.](directing_image_gen_models.html)
-
-**Internships for PhD students: ** If you are interested in related areas to the ones I've mentioned above (or anything
+to better manipulate and author 3D content.</p>
+<p>Latest on my research:</p>
+<ul>
+<li><a href="directing_image_gen_models.html">Directing Image Generative Models.</a></li>
+</ul>
+<p><strong>Internships for PhD students:</strong> If you are interested in related areas to the ones I've mentioned above (or anything
 related to my previous research), don't be shy and send me an e-mail with your CV and a short
 description of the problems you are interested in working on. We are always looking for talented
-interns to join us at Adobe Research.
-
-**Academic Collaborations: ** If you are a professor or a student interested in working with me,
+interns to join us at Adobe Research.</p>
+<p><strong>Academic Collaborations:</strong> If you are a professor or a student interested in working with me,
 feel free to send me an e-mail -- I am more than happy to discuss interesting research problems we
-could work on together (or even just to chat about research).
-
-[[CV](cv.pdf)]
-[[twitter](https://twitter.com/gadelha_m)]
-[[email](mailto:matheusabrantesgadelha@gmail.com)]
-[[scholar](https://scholar.google.com/citations?user=VhqmvXsAAAAJ&hl=en)]
-
-(#) Work Experience
-
-![   ](fig/adobe_logo.png width="7%") **Adobe**. Research Scientist at San Jose, CA. _June 2021 - Now_.
-
-</br>
-
-----------------------------------------------------------------------------------------------------
-
-![   ](fig/google_logo.png width="7%") **Google (Perception)**. Research Intern in ~~Mountain View, CA~~ Amherst, MA. _Summer 2020_.
-
-</br>
-
-----------------------------------------------------------------------------------------------------
-
-![   ](fig/adobe_logo.png width="7%") **Adobe**. Research Intern at San Jose, CA. _Summer 2019_.
-
-</br>
-
-----------------------------------------------------------------------------------------------------
-
-![   ](fig/amazon_logo.png width="7%") **Amazon**. Applied Scientist Intern at Pasadena, CA. _Summer 2018_.
-
-
-</br>
-
-(#) Research
-
-![ ](fig/dmesh_teaser.gif width="20%")
-[arXiv]
-
-**DMesh: A Differentiable Representation for General Meshes**
-
-_Sanghyun Son, **Matheus Gadelha**, Yang Zhou, Zexiang Xu, Ming C. Lin, Yi Zhou_
-
-[[Pre-print](https://www.cs.umd.edu/~shh1295/dmesh/full.pdf)]
-[[Project Page](https://sonsang.github.io/dmesh-project/)]
-
------
-
-
-![ ](fig/gem3d.gif width="20%")
-[SIGGRAPH 2024]
-
-**GEM3D: Generative Medial Abstractions for 3D Shape Synthesis**
-
-_Dmitry Petrov, Pradyumn Goyal, Vikas Thamizharasan, Vova Kim, **Matheus Gadelha**, Melinos Averkiou, Siddhartha Chaudhuri, Evangelos Kalogerakis_
-
-[[Pre-print](https://arxiv.org/abs/2402.16994)]
-[[Project Page](https://lodurality.github.io/GEM3D/)]
-
------
-
-
-![ ](fig/c3dw.png width="20%")
-[CVPR 2024]
-
-**Learning Continuous 3D Words for Text-to-Image Generation**
-
-_Ta-Ying Cheng, **Matheus Gadelha**, Thibault Groueix, Matthew Fisher, Radomir Mech, Andrew Markham, Niki Trigoni_
-
-[[Pre-print](https://ttchengab.github.io/continuous_3d_words/c3d_words.pdf)]
-[[Project Page](https://ttchengab.github.io/continuous_3d_words/)]
-
------
-
-
-![ ](fig/sunflower-gif.gif width="20%")
-[CVPR 2024]
-
-**Diffusion Handles: Enabling 3D Edits for Diffusion Models by Lifting Activations to 3D**
-
-_Karran Pandey, Paul Guerrero, **Matheus Gadelha**, Yannick Hold-Geoffroy, Karan Singh, Niloy Mitra_
-
-[[Pre-print](https://arxiv.org/pdf/2312.02190.pdf)]
-[[Project Page](https://diffusionhandles.github.io/)]
-
------
-
-
-![ ](fig/genren.gif width="20%")
-[CVPR 2024]
-
-**Generative Rendering: Controllable 4D-Guided Video Generation with 2D Diffusion Models**
-
-_Shengqu Cai, Duygu Ceylan, **Matheus Gadelha**, Chun-Hao Huang, Tuanfeng Y. Wang, Gordon Wetzstein_
-
-[[Pre-print](https://primecai.github.io/generative_rendering/assets/pdf/low_res.pdf)]
-[[Project Page](https://primecai.github.io/generative_rendering/index)]
-
------
-
-
-![ ](fig/3dminer.png width="20%")
-[ICCV 2023]
-
-**3DMiner: Discovering Shapes from Large-Scale Unannotated Image Datasets**
-
-_Ta-Ying Cheng, **Matheus Gadelha**, Soren Pirk, Thibault Groueix, Radomir Mech, Andrew Markham, Niki Trigoni_
-
-[[Paper](https://openaccess.thecvf.com/content/ICCV2023/html/Cheng_3DMiner_Discovering_Shapes_from_Large-Scale_Unannotated_Image_Datasets_ICCV_2023_paper.html)]
-[[Project Page](https://ttchengab.github.io/3dminerOfficial/)]
-
------
-
-![ ](fig/anise.png width="20%")
-[TVCG]
-
-**ANISE: Assembly-based Neural Implicit Surface rEconstruction**
-
-_Dmitry Petrov, **Matheus Gadelha**, Radomir Mech, Evangelos Kalogerakis_
-
-[[Pre-print](https://arxiv.org/pdf/2205.13682.pdf)]
-[[Project Page](https://lodurality.github.io/ANISE/)]
-
------
-
-![ ](fig/turntables.png width="20%")
-[ICCV 2023 Workshop]
-
-**Accidental Turntables: Learning 3D Pose by Watching Objects Turn**
-
-_Zezhou Cheng, **Matheus Gadelha**, Subhransu Maji_
-
-[[Pre-print](https://arxiv.org/pdf/2212.06300.pdf)]
-[[Project Page](https://people.cs.umass.edu/~zezhoucheng/acci-turn/)]
-
------
-
-![ ](fig/recovdetail.png width="20%")
-[ECCV 2022 Workshop]
-
-**Recovering Detail in 3D Shapes Using Disparity Maps**
-
-_Marissa Ramirez de Chanlatte, **Matheus Gadelha**, Thibault Groueix, Radomir Mech_
-
-[[Pre-print](https://arxiv.org/pdf/2207.00182.pdf)]
-
------
-
-![ ](fig/surfit.png width="20%")
-[SGP 2022]
-
-**PrimFit: Learning to Fit Primitives Improves Few Shot Learning on Point Clouds**
-
-_Gopal Sharma, Bidya Dash, **Matheus Gadelha**, Aruni RoyChowdhury, Marios Loizou, Evangelos Kalogerakis, Liangliang Cao, Erik Learned-Miller, Rui Wang and Subhransu Maji_
-
-[[Pre-print](https://arxiv.org/pdf/2112.13942.pdf)]
-
------
-
-![ ](fig/planar_recon.png width="20%")
-[CVPR 2022]
-
-**PlanarRecon: Real-time 3D Plane Detection and Reconstruction from Posed Monocular Videos**
-
-_Yiming Xie, **Matheus Gadelha**, Fengting Yang, Xiaowei Zhou, Huaizu Jiang_
-
-[[Paper](https://openaccess.thecvf.com/content/CVPR2022/papers/Xie_PlanarRecon_Real-Time_3D_Plane_Detection_and_Reconstruction_From_Posed_Monocular_CVPR_2022_paper.pdf)]
-[[Supplemental](https://openaccess.thecvf.com/content/CVPR2022/supplemental/Xie_PlanarRecon_Real-Time_3D_CVPR_2022_supplemental.pdf)]
-
------
-
-![ ](fig/tmm_paper.png width="20%")
-[IEEE AIVR 2021]
-
-**Trace Match & Merge: Long-TermField-Of-View Prediction for AR Applications**
-
-_Adam Viola`*`, Sahil Sharma`*`,Pankaj Bishnoi`*`, **Matheus Gadelha**, Stefano Petrangeli, Haoliang Wang, Viswanathan Swaminathan_
-
-**Best paper candidate at [IEEE AIVR](https://ieee-aivr.cs.nthu.edu.tw/program)**.
-
-[[Paper](AIVR_2021___AR_FOV_prediction.pdf)]
-
------
-![ ](fig/prgan_journal.png width="20%")
-[IJCV 2020]
-
-**Inferring 3D Shapes from Image Collections using Adversarial Networks**
-
-_**Matheus Gadelha**, Aartika Rai, Rui Wang, Subhransu Maji_
-
-[[Journal](https://link.springer.com/article/10.1007/s11263-020-01335-w)]
-[[Pre-print](https://arxiv.org/abs/1906.04910)]
-
------
-
-![ ](fig/acd.png width="20%")
-[ECCV 2020]
-
-**Label-Efficient Learning on Point Clouds using Approximate Convex Decompositions**
-
-_**Matheus Gadelha**`*`, Aruni RoyChowdhury`*`, Gopal Sharma, Evangelos Kalogerakis, Liangliang Cao, Erik Learned-Miller, Rui Wang, Subhransu Maji_
-
-[[Paper](https://arxiv.org/pdf/2003.13834.pdf)]
-[[Project Page](selfsupacd/index.html)]
-
------
-
-
-![ ](fig/dmp_snapshot.png width="20%")
-**Deep Manifold Prior**
-
-_**Matheus Gadelha**, Rui Wang, Subhransu Maji_
-
-**Best poster honorable mention at [NECV](http://visual.cs.brown.edu/workshops/necv2019/)**.
-
-[[Paper](https://arxiv.org/pdf/2004.04242.pdf)]
-
-
------
-
-![ ](shapehandles/fig/snapshot.png width="20%")
-[CVPR 2020]
-
-**Learning Generative Models of Shape Handles**
-
-_**Matheus Gadelha**, Giorgio Gori, Duygu Ceylan, Radomir Mech, Nathan Carr, Tamy Boubekeur, Rui Wang, Subhransu Maji_
-
-
-[[Project Page](shapehandles/index.html)]
-
------
-
-
-![ ](shaperec/fig/abstract.png width="20%")
-[ICCV 2019]
-
-**Shape Reconstruction with Differentiable Projections and Deep Priors **
-
-_**Matheus Gadelha**, Rui Wang, Subhransu Maji_
-
-[[Paper](shaperec/dsp_paper.pdf)]
-[[Project Page](shaperec/index.html)]
-
-
------
-
-![ ](fig/bayesdip.png width="20%")
-[CVPR 2019]
-
-**A Bayesian Perspective on the Deep Image Prior **
-
-_Zezhou Cheng, **Matheus Gadelha**, Subhransu Maji, Daniel Sheldon_
-
-[[Paper](https://arxiv.org/abs/1904.07457)]
-[[Project Page](https://people.cs.umass.edu/~zezhoucheng/gp-dip/)]
-
------
-
-![ ](https://people.cs.umass.edu/~jcsu/papers/shape_recog/advers_examples.png width="20%")
-[ECCV 2018 - 3DRMS Workshop]
-
-**A Deeper Look at 3D Shape Classifiers **
-
-_Jong-Chyi Su, **Matheus Gadelha**, Rui Wang, Subhransu Maji_
-
-[[Paper](https://arxiv.org/abs/1809.02560)]
-[[Project Page](https://people.cs.umass.edu/~jcsu/papers/shape_recog/)]
-
-</br>
-
------
-
-![ ](mrt/fig/smallabs.png width="20%")
-[ECCV 2018]
-
-**Multiresolution Tree Networks for Point Cloud Processing **
-
-_**Matheus Gadelha**, Rui Wang, Subhransu Maji_
-
-[[Paper](https://arxiv.org/abs/1807.03520)]
-[[Project Page](mrt/index.html)]
-
-</br>
-
------
-
-![ ](prgan/fig/overview.png width="20%")
-[3DV 2017]
-
-**Unsupervised 3D Shape Induction from 2D Views of Multiple Objects **
-
-_**Matheus Gadelha**, Subhransu Maji, Rui Wang_
-
-[[Paper](https://arxiv.org/pdf/1612.05872.pdf)]
-[[Project Page](prgan/index.html)]
-
-</br>
-
------
-
-![ ](fig/sketch.png width="20%")
-[3DV 2017]
-
-**3D Shape Reconstruction from Sketches via Multi-view Convolutional Networks **
-
-_Zhaoliang Lun, **Matheus Gadelha**, Evangelos Kalogerakis, Subhransu Maji, Rui Wang_
-
-[[ArXiv](https://arxiv.org/abs/1707.06375)]
-[[Project Page](https://people.cs.umass.edu/~zlun/papers/SketchModeling/)]
-
------
-
-![ ](sppc/fig/airplanes_sorting_new2.png width="20%")
-[BMVC 2017]
-
-**Shape Generation using Spatially Partitioned Point Clouds **
-
-_**Matheus Gadelha**, Subhransu Maji, Rui Wang_
-
-[[ArXiv](https://arxiv.org/abs/1707.06267)]
-[[Project Page](sppc/index.html)]
-
-(#) Reviewing
-
-I worked/am working as a reviewer for the following venues:
-
-* SIGGRAPH 2023 
-* CVPR 2018-2023 (**2021 outstanding reviewer**)
-* ICCV 2019-2023
-* ECCV 2018-2023
-* ICLR 2021
-* TPAMI (2018, 2021, 2023) 
-* Computer and Graphics 2018
-* SIGGRAPH Asia 2018
-* Pacific Graphics 2019
-
-I worked/am working as AC for the following venues:
-
-* WACV 2023
-
-
-(#) Open Source
-
-(##) Interactive Mesh Deformation w/ ARAP Surface Modeling
-
-![As Rigid as Possible Interactive Demo](https://www.youtube.com/watch?v=QUtpoybhYA8)
-Implementation of the ARAP Surface Modeling paper. 
-It includes a software to deform any mesh, applying the computed transformation in real time. 
-Made using C++ with Eigen and OpenGL.
-[[code](https://github.com/matheusgadelha/Pintar)]
-
-(##) Rigid Body Simulation
-
-Rigid body simulator coded in C++ with Eigen library and OpenGL. 
-The code includes a demo where you can load any model and interactively draw forces.
-	[[code](https://github.com/matheusgadelha/Pintar)]
-
-
-(##) Subdivision Surface
-
-![Smoothing bunnies w/ subdivision surfaces.](fig/bunny_gets_better.png width="25%")
-Code in C++ to perform subdivision of a closed triangular mesh. Made from scratch, so no
-libraries are required.
-[[code](https://github.com/matheusgadelha/SubdivisionSurfaces)]
-
-
-(##) Generic A* implementation and CSP solver
-
-Template-based implementation for the A* algorithm and CSP solver written in C++. 
-It is a generic solver, where you can simply define the successor and heuristic function for each problem. 
-Includes examples on solving knight shortest path problem and the classic TSP (w/ Minimum Spanning Tree heuristic).
-CSP solver includes an efficient sudoku solver example.
-[[A* code](https://github.com/matheusgadelha/AStar)]
-[[CSP code](https://github.com/matheusgadelha/CSPSolver)]
-
-<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js" charset="utf-8"></script><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js" charset="utf-8"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-102648389-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+could work on together (or even just to chat about research).</p>
+<p>[<a href="cv.pdf">CV</a>]
+[<a href="https://twitter.com/gadelha_m">twitter</a>]
+[<a href="mailto:matheusabrantesgadelha@gmail.com">email</a>]
+[<a href="https://scholar.google.com/citations?user=VhqmvXsAAAAJ&amp;hl=en">scholar</a>]</p>
+
+      <h2 id="papers">Papers</h2>
+      <article>
+<header>arXiv</header>
+<p><img class='float-left' alt="" src="fig/dmesh_teaser.gif" /></p>
+<p><strong>DMesh: A Differentiable Representation for General Meshes</strong></p>
+<p><em>Sanghyun Son, <strong>Matheus Gadelha</strong>, Yang Zhou, Zexiang Xu, Ming C. Lin, Yi Zhou</em></p>
+<footer><a href=https://www.cs.umd.edu/~shh1295/dmesh/full.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://sonsang.github.io/dmesh-project/><i class="fa-solid fa-globe"></i></a></footer>
+</article>
+
+
+<article>
+<header>SIGGRAPH 2024</header>
+<p><img class='float-left' alt=" " src="fig/gem3d.gif" /></p>
+<p><strong>GEM3D: Generative Medial Abstractions for 3D Shape Synthesis</strong></p>
+<p><em>Dmitry Petrov, Pradyumn Goyal, Vikas Thamizharasan, Vova Kim, <strong>Matheus Gadelha</strong>, Melinos Averkiou, Siddhartha Chaudhuri, Evangelos Kalogerakis</em></p>
+<footer><a href=https://arxiv.org/abs/2402.16994><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://lodurality.github.io/GEM3D/><i class="fa-solid fa-globe"></i></a></footer>
+</article>
+
+
+<article>
+<header>CVPR 2024</header>
+<p><img class='float-left' alt=" " src="fig/c3dw.png" /></p>
+<p><strong>Learning Continuous 3D Words for Text-to-Image Generation</strong></p>
+<p><em>Ta-Ying Cheng, <strong>Matheus Gadelha</strong>, Thibault Groueix, Matthew Fisher, Radomir Mech, Andrew Markham, Niki Trigoni</em></p>
+<footer><a href=https://ttchengab.github.io/continuous_3d_words/c3d_words.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://ttchengab.github.io/continuous_3d_words/><i class="fa-solid fa-globe"></i></a></footer>
+</article>
+
+
+<article>
+<header>CVPR 2024</header>
+<p><img class='float-left' alt=" " src="fig/sunflower-gif.gif" /></p>
+<p><strong>Diffusion Handles: Enabling 3D Edits for Diffusion Models by Lifting Activations to 3D</strong></p>
+<p><em>Karran Pandey, Paul Guerrero, <strong>Matheus Gadelha</strong>, Yannick Hold-Geoffroy, Karan Singh, Niloy Mitra</em></p>
+<footer><a href=https://arxiv.org/pdf/2312.02190.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://diffusionhandles.github.io/><i class="fa-solid fa-globe"></i></a></footer>
+</article>
+
+
+<article>
+<header>CVPR 2024</header>
+<p><img class='float-left' alt=" " src="fig/genren.gif" /></p>
+<p><strong>Generative Rendering: Controllable 4D-Guided Video Generation with 2D Diffusion Models</strong></p>
+<p><em>Shengqu Cai, Duygu Ceylan, <strong>Matheus Gadelha</strong>, Chun-Hao Huang, Tuanfeng Y. Wang, Gordon Wetzstein</em></p>
+<footer><a href=https://primecai.github.io/generative_rendering/assets/pdf/low_res.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://primecai.github.io/generative_rendering/index><i class="fa-solid fa-globe"></i></a></footer>
+</article>
+
+
+<article>
+<header>ICCV 2023</header>
+<p><img class='float-left' alt=" " src="fig/3dminer.png" /></p>
+<p><strong>3DMiner: Discovering Shapes from Large-Scale Unannotated Image Datasets</strong></p>
+<p><em>Ta-Ying Cheng, <strong>Matheus Gadelha</strong>, Soren Pirk, Thibault Groueix, Radomir Mech, Andrew Markham, Niki Trigoni</em></p>
+<footer><a href=https://openaccess.thecvf.com/content/ICCV2023/html/Cheng_3DMiner_Discovering_Shapes_from_Large-Scale_Unannotated_Image_Datasets_ICCV_2023_paper.html><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://ttchengab.github.io/3dminerOfficial/><i class="fa-solid fa-globe"></i></a></footer>
+</article>
+
+
+<article>
+<header>TVCG</header>
+<p><img class='float-left' alt=" " src="fig/anise.png" /></p>
+<p><strong>ANISE: Assembly-based Neural Implicit Surface rEconstruction</strong></p>
+<p><em>Dmitry Petrov, <strong>Matheus Gadelha</strong>, Radomir Mech, Evangelos Kalogerakis</em></p>
+<footer><a href=https://arxiv.org/pdf/2205.13682.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://lodurality.github.io/ANISE/><i class="fa-solid fa-globe"></i></a></footer>
+</article>
+
+
+<article>
+<header>ICCV 2023 Workshop</header>
+<p><img class='float-left' alt=" " src="fig/turntables.png" /></p>
+<p><strong>Accidental Turntables: Learning 3D Pose by Watching Objects Turn</strong></p>
+<p><em>Zezhou Cheng, <strong>Matheus Gadelha</strong>, Subhransu Maji</em></p>
+<footer><a href=https://arxiv.org/pdf/2212.06300.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://people.cs.umass.edu/~zezhoucheng/acci-turn/><i class="fa-solid fa-globe"></i></a></footer>
+</article>
+
+
+<article>
+<header>ECCV 2022 Workshop</header>
+<p><img class='float-left' alt=" " src="fig/recovdetail.png" /></p>
+<p><strong>Recovering Detail in 3D Shapes Using Disparity Maps</strong></p>
+<p><em>Marissa Ramirez de Chanlatte, <strong>Matheus Gadelha</strong>, Thibault Groueix, Radomir Mech</em></p>
+<footer><a href=https://arxiv.org/pdf/2207.00182.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; </footer>
+</article>
+
+
+<article>
+<header>SGP 2022</header>
+<p><img class='float-left' alt=" " src="fig/surfit.png" /></p>
+<p><strong>PrimFit: Learning to Fit Primitives Improves Few Shot Learning on Point Clouds</strong></p>
+<p><em>Gopal Sharma, Bidya Dash, <strong>Matheus Gadelha</strong>, Aruni RoyChowdhury, Marios Loizou, Evangelos Kalogerakis, Liangliang Cao, Erik Learned-Miller, Rui Wang and Subhransu Maji</em></p>
+<footer><a href=https://arxiv.org/pdf/2112.13942.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; </footer>
+</article>
+
+
+<article>
+<header>CVPR 2022</header>
+<p><img class='float-left' alt=" " src="fig/planar_recon.png" /></p>
+<p><strong>PlanarRecon: Real-time 3D Plane Detection and Reconstruction from Posed Monocular Videos</strong></p>
+<p><em>Yiming Xie, <strong>Matheus Gadelha</strong>, Fengting Yang, Xiaowei Zhou, Huaizu Jiang</em></p>
+<footer><a href=https://openaccess.thecvf.com/content/CVPR2022/papers/Xie_PlanarRecon_Real-Time_3D_Plane_Detection_and_Reconstruction_From_Posed_Monocular_CVPR_2022_paper.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://neu-vi.github.io/planarrecon/><i class="fa-solid fa-globe"></i></a></footer>
+</article>
+
+
+<article>
+<header>IEEE AIVR 2021</header>
+<p><img class='float-left' alt=" " src="fig/tmm_paper.png" /></p>
+<p><strong>Trace Match &amp; Merge: Long-TermField-Of-View Prediction for AR Applications</strong></p>
+<p><em>Adam Viola<code>*</code>, Sahil Sharma<code>*</code>,Pankaj Bishnoi<code>*</code>, <strong>Matheus Gadelha</strong>, Stefano Petrangeli, Haoliang Wang, Viswanathan Swaminathan</em></p>
+<p><strong>Best paper candidate at <a href="https://ieee-aivr.cs.nthu.edu.tw/program">IEEE AIVR</a></strong>.</p>
+<footer><a href=AIVR_2021___AR_FOV_prediction.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; </footer>
+</article>
+
+
+<article>
+<header>IJCV 2020</header>
+<p><img class='float-left' alt=" " src="fig/prgan_journal.png" /></p>
+<p><strong>Inferring 3D Shapes from Image Collections using Adversarial Networks</strong></p>
+<p><em><strong>Matheus Gadelha</strong>, Aartika Rai, Rui Wang, Subhransu Maji</em></p>
+<footer><a href=https://arxiv.org/abs/1906.04910><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; </footer>
+</article>
+
+
+<article>
+<header>ECCV 2020</header>
+<p><img class='float-left' alt=" " src="fig/acd.png" /></p>
+<p><strong>Label-Efficient Learning on Point Clouds using Approximate Convex Decompositions</strong></p>
+<p><em><strong>Matheus Gadelha</strong><code>*</code>, Aruni RoyChowdhury<code>*</code>, Gopal Sharma, Evangelos Kalogerakis, Liangliang Cao, Erik Learned-Miller, Rui Wang, Subhransu Maji</em></p>
+<footer><a href=https://arxiv.org/pdf/2003.13834.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=selfsupacd/index.html><i class="fa-solid fa-globe"></i></a></footer>
+</article>
+
+
+<article>
+<header>arXiv</header>
+<p><img class='float-left' alt=" " src="fig/dmp_snapshot.png" /></p>
+<p><strong>Deep Manifold Prior</strong></p>
+<p><em><strong>Matheus Gadelha</strong>, Rui Wang, Subhransu Maji</em></p>
+<p><strong>Best poster honorable mention at <a href="http://visual.cs.brown.edu/workshops/necv2019/">NECV</a></strong>.</p>
+<footer><a href=https://arxiv.org/pdf/2004.04242.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; </footer>
+</article>
+
+
+<article>
+<header>CVPR 2020</header>
+<p><img class='float-left' alt=" " src="shapehandles/fig/snapshot.png" /></p>
+<p><strong>Learning Generative Models of Shape Handles</strong></p>
+<p><em><strong>Matheus Gadelha</strong>, Giorgio Gori, Duygu Ceylan, Radomir Mech, Nathan Carr, Tamy Boubekeur, Rui Wang, Subhransu Maji</em></p>
+<footer> &nbsp;&nbsp;&nbsp; <a href=shapehandles/index.html><i class="fa-solid fa-globe"></i></a></footer>
+</article>
+
+
+<article>
+<header>ICCV 2019</header>
+<p><img class='float-left' alt=" " src="shaperec/fig/abstract.png" /></p>
+<p>**Shape Reconstruction with Differentiable Projections and Deep Priors **</p>
+<p><em><strong>Matheus Gadelha</strong>, Rui Wang, Subhransu Maji</em></p>
+<footer><a href=shaperec/dsp_paper.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=shaperec/index.html><i class="fa-solid fa-globe"></i></a></footer>
+</article>
+
+
+<article>
+<header>CVPR 2019</header>
+<p><img class='float-left' alt=" " src="fig/bayesdip.png" /></p>
+<p>**A Bayesian Perspective on the Deep Image Prior **</p>
+<p><em>Zezhou Cheng, <strong>Matheus Gadelha</strong>, Subhransu Maji, Daniel Sheldon</em></p>
+<footer><a href=https://arxiv.org/abs/1904.07457><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://people.cs.umass.edu/~zezhoucheng/gp-dip/><i class="fa-solid fa-globe"></i></a></footer>
+</article>
+
+
+<article>
+<header>ECCV 2018 - 3DRMS Workshop</header>
+<p><img class='float-left' alt=" " src="https://people.cs.umass.edu/~jcsu/papers/shape_recog/advers_examples.png" /></p>
+<p><strong>A Deeper Look at 3D Shape Classifiers</strong></p>
+<p><em>Jong-Chyi Su, <strong>Matheus Gadelha</strong>, Rui Wang, Subhransu Maji</em></p>
+<p></br></p>
+<footer><a href=https://arxiv.org/abs/1809.02560><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://people.cs.umass.edu/~jcsu/papers/shape_recog/><i class="fa-solid fa-globe"></i></a></footer>
+</article>
+
+
+<article>
+<header>ECCV 2018</header>
+<p><img class='float-left' alt=" " src="mrt/fig/smallabs.png" /></p>
+<p><strong>Multiresolution Tree Networks for Point Cloud Processing</strong></p>
+<p><em><strong>Matheus Gadelha</strong>, Rui Wang, Subhransu Maji</em></p>
+<footer><a href=https://arxiv.org/abs/1807.03520><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=mrt/index.html><i class="fa-solid fa-globe"></i></a></footer>
+</article>
+
+
+<article>
+<header>3DV 2017</header>
+<p><img class='float-left' alt=" " src="prgan/fig/overview.png" /></p>
+<p><strong>Unsupervised 3D Shape Induction from 2D Views of Multiple Objects</strong></p>
+<p><em><strong>Matheus Gadelha</strong>, Subhransu Maji, Rui Wang</em></p>
+<footer><a href=https://arxiv.org/pdf/1612.05872.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=prgan/index.html><i class="fa-solid fa-globe"></i></a></footer>
+</article>
+
+
+<article>
+<header>3DV 2017</header>
+<p><img class='float-left' alt=" " src="fig/sketch.png" /></p>
+<p><strong>3D Shape Reconstruction from Sketches via Multi-view Convolutional Networks</strong></p>
+<p><em>Zhaoliang Lun, <strong>Matheus Gadelha</strong>, Evangelos Kalogerakis, Subhransu Maji, Rui Wang</em></p>
+<footer><a href=https://arxiv.org/abs/1707.06375><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://people.cs.umass.edu/~zlun/papers/SketchModeling/><i class="fa-solid fa-globe"></i></a></footer>
+</article>
+
+
+<article>
+<header>BMVC 2017</header>
+<p><img class='float-left' alt=" " src="sppc/fig/airplanes_sorting_new2.png" /></p>
+<p><strong>Shape Generation using Spatially Partitioned Point Clouds</strong></p>
+<p><em><strong>Matheus Gadelha</strong>, Subhransu Maji, Rui Wang</em></p>
+<footer><a href=https://arxiv.org/abs/1707.06267><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=sppc/index.html><i class="fa-solid fa-globe"></i></a></footer>
+</article>
+
+
+
+      <h2 id="service">Service</h2>
+      <p>I worked/am working as a reviewer for the following venues:</p>
+<ul>
+<li>SIGGRAPH 2023, 2024</li>
+<li>CVPR 2018-2024 (<strong>2021 outstanding reviewer</strong>)</li>
+<li>ICCV 2019-2023</li>
+<li>ECCV 2018-2023</li>
+<li>ICLR 2021</li>
+<li>TPAMI (2018, 2021, 2023) </li>
+<li>IJCV 2023, 2024</li>
+<li>Computer and Graphics 2018, 2024</li>
+<li>SIGGRAPH Asia 2018, 2024</li>
+<li>Pacific Graphics 2019</li>
+</ul>
+<p>I worked/am working as AC for the following venues:</p>
+<ul>
+<li>WACV 2024, 2025</li>
+</ul>
+
+      <h2 id="experience">Professional Experience</h2>
+      <article><p><img class='float-left' alt="" src="fig/adobe_logo.png" />
+<strong>Adobe</strong>.</p>
+<p>Research Scientist at San Jose, CA.</p>
+<p><em>June 2021 - Now</em>.</p></article>
+<article><p><img class='float-left' alt="" src="fig/google_logo.png" />
+<strong>Google (Perception)</strong>. </p>
+<p>Research Intern in Amherst, MA. </p>
+<p><em>Summer 2020</em>.</p></article>
+<article><p><img class='float-left' alt="" src="fig/adobe_logo.png" />
+<strong>Adobe</strong>.</p>
+<p>Research Intern at San Jose, CA</p>
+<p><em>Summer 2019</em>.</p></article>
+<article><p><img class='float-left' alt="" src="fig/amazon_logo.png" />
+<strong>Amazon</strong>. </p>
+<p>Applied Scientist Intern at Pasadena, CA. </p>
+<p><em>Summer 2018</em>.</p></article>
+<article><p><img class='float-left' alt="" src="fig/brasao_ufrn.png" />
+<strong>Federal University at Rio Grande do Norte</strong>. </p>
+<p>Temporary Letcturer - Introduction to Algorithms and Numerical Methods. </p>
+<p><em>June 2014 - June2015 </em>.</p></article>
+
+    </main>
+  </body>
+</html>
