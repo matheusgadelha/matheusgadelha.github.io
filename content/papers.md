@@ -6,7 +6,7 @@
 
 _Sanghyun Son, **Matheus Gadelha**, Yang Zhou, Zexiang Xu, Ming C. Lin, Yi Zhou_
 
-[[Pre-print](https://www.cs.umd.edu/~shh1295/dmesh/full.pdf)]
+[[Pre-print](https://www.cs.umd.edu/~shh1295/dmesh/full2.pdf)]
 [[Project Page](https://sonsang.github.io/dmesh-project/)]
 :::
 
