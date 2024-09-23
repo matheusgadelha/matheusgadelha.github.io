@@ -1,4 +1,14 @@
 :::paper
+![](fig/mesh_refinement.png)
+[[[SIGGRAPH Asia 2024]]]
+**Text-guided Controllable Mesh Refinement for Interactive 3D Modeling**
+
+_Yun-Chun Chen, Selena Ling, Zhiqin Chen, Vladimir G. Kim, **Matheus Gadelha**, Alec Jacobson_
+
+[[Pre-print](https://arxiv.org/pdf/2406.01592)]
+:::
+
+:::paper
 ![](fig/dmesh_teaser.gif)
 [[[arXiv]]]
 
@@ -203,7 +213,7 @@ _**Matheus Gadelha**, Giorgio Gori, Duygu Ceylan, Radomir Mech, Nathan Carr, Tam
 ![ ](shaperec/fig/abstract.png )
 [[[ICCV 2019]]]
 
-**Shape Reconstruction with Differentiable Projections and Deep Priors **
+**Shape Reconstruction with Differentiable Projections and Deep Priors**
 
 _**Matheus Gadelha**, Rui Wang, Subhransu Maji_
 
@@ -217,7 +227,7 @@ _**Matheus Gadelha**, Rui Wang, Subhransu Maji_
 ![ ](fig/bayesdip.png )
 [[[CVPR 2019]]]
 
-**A Bayesian Perspective on the Deep Image Prior **
+**A Bayesian Perspective on the Deep Image Prior**
 
 _Zezhou Cheng, **Matheus Gadelha**, Subhransu Maji, Daniel Sheldon_
 

@@ -14,5 +14,6 @@ I worked/am working as a reviewer for the following venues:
 I worked/am working as AC for the following venues:
 
 * WACV 2024, 2025
+* CVPR 2025
 
 
