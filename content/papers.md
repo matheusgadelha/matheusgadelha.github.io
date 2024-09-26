@@ -10,7 +10,7 @@ _Yun-Chun Chen, Selena Ling, Zhiqin Chen, Vladimir G. Kim, **Matheus Gadelha**, 
 
 :::paper
 ![](fig/dmesh_teaser.gif)
-[[[arXiv]]]
+[[[NeurIPS 2024]]]
 
 **DMesh: A Differentiable Representation for General Meshes**
 
