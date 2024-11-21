@@ -26,7 +26,8 @@ feel free to send me an e-mail -- I am more than happy to discuss interesting re
 could work on together (or even just to chat about research).
 
 [[CV](cv.pdf)]
-[[twitter](https://twitter.com/gadelha_m)]
+[[bluesky](https://bsky.app/profile/gadelha.bsky.social)]
+[[linkedin](https://www.linkedin.com/in/matheusgadelha/)]
 [[email](mailto:matheusabrantesgadelha@gmail.com)]
 [[scholar](https://scholar.google.com/citations?user=VhqmvXsAAAAJ&hl=en)]
 

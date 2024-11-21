@@ -136,6 +136,7 @@ arg_parser = argparse.ArgumentParser(
 arg_parser.add_argument("template", type=str, help="Template file to use")
 
 presentation_md = os.path.join("content", "presentation.md")
+tt_preamble_md = os.path.join("content", "tt_preamble.md")
 experience_md = os.path.join("content", "experience.md")
 techtransfer_md = os.path.join("content", "techtransfer.md")
 papers_md = os.path.join("content", "papers.md")
@@ -150,6 +151,9 @@ if __name__ == "__main__":
     with open(presentation_md, "r") as f:
         presentation = f.read()
 
+    with open(tt_preamble_md, "r") as f:
+        tt_preamble = f.read()
+
     with open(experience_md, "r") as f:
         experience = f.read()
 
@@ -163,6 +167,7 @@ if __name__ == "__main__":
         service = f.read()
 
     presentation_html = markdown.markdown(presentation)
+    tt_preable_html = markdown.markdown(tt_preamble)
     service_html = markdown.markdown(service)
 
     experience_html_list = parse_experience(experience)
@@ -180,6 +185,7 @@ if __name__ == "__main__":
         f.write(
             template.format(
                 presentation=presentation_html,
+                tt_preamble=tt_preable_html,
                 experience=experience_html,
                 papers=papers_html,
                 techtransfers_column1=techtransfer_html_column1,
