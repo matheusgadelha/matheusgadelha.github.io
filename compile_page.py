@@ -25,6 +25,59 @@ def parse_experience(experience_md: str) -> List[str]:
     return experiences
 
 
+def parse_techtransfer(techtransfers_md: str) -> List[str]:
+    pattern = r":::tech\s*(.*?)\s*:::"
+    matches = re.findall(pattern, techtransfers_md, re.DOTALL | re.MULTILINE)
+
+    techtransfers = []
+
+    for match in matches:
+        # select venue by finding [[[venue]]] in match and then remove it
+        venue_pattern = r"\[\[\[(.*?)\]\]\]"
+        venue_match = re.search(venue_pattern, match)
+        venue_tag = ""
+        if venue_match:
+            venue_name = venue_match.group(1)
+            venue_tag = f"<header>{venue_name}</header>"
+            match = re.sub(venue_pattern, "", match)
+
+        # select project page link by finding [[Project Page](link)] and then remove it
+        # IMPORTANT: [[Project Page]... is a string, not something we will capture!
+        project_link_pattern = r"\[\[Project Page\]\((.*?)\)\]"
+        project_link_match = re.search(project_link_pattern, match)
+        project_link = ""
+        project_tag = ""
+        if project_link_match:
+            project_link = project_link_match.group(1)
+            match = re.sub(project_link_pattern, "", match)
+            project_tag = f'<a href={project_link}><i class="fa-solid fa-globe"></i></a>'
+
+        # select project page link by finding [[Pre-print](link)] and then remove it
+        # IMPORTANT: [[Pre-print]... is a string, not something we will capture!
+        preprint_link_pattern = r"\[\[Pre-print\]\((.*?)\)\]"
+        preprint_link_match = re.search(preprint_link_pattern, match)
+        preprint_link = ""
+        preprint_tag = ""
+        if preprint_link_match:
+            preprint_link = preprint_link_match.group(1)
+            match = re.sub(preprint_link_pattern, "", match)
+            preprint_tag = f'<a href={preprint_link}><i class="fa-solid fa-file-pdf"></i></a>'
+
+        md = markdown.markdown(match)
+        # for every img tag in md string, make max-width 150px
+        md = re.sub(r"<img", "<img class='float-left'", md)
+
+        linktag = f'<footer>{preprint_tag} &nbsp;&nbsp;&nbsp; {project_tag}</footer>'
+
+        # wrap md in article tag
+        md = f"<article>\n" f"{venue_tag}\n" f"{md}\n" f"{linktag}\n" f"</article>\n\n"
+
+        techtransfers.append(md)
+
+    return techtransfers
+
+
+
 def parse_papers(papers_md: str) -> List[str]:
     pattern = r":::paper\s*(.*?)\s*:::"
     matches = re.findall(pattern, papers_md, re.DOTALL | re.MULTILINE)
@@ -84,6 +137,7 @@ arg_parser.add_argument("template", type=str, help="Template file to use")
 
 presentation_md = os.path.join("content", "presentation.md")
 experience_md = os.path.join("content", "experience.md")
+techtransfer_md = os.path.join("content", "techtransfer.md")
 papers_md = os.path.join("content", "papers.md")
 service_md = os.path.join("content", "service.md")
 
@@ -99,6 +153,9 @@ if __name__ == "__main__":
     with open(experience_md, "r") as f:
         experience = f.read()
 
+    with open(techtransfer_md, "r") as f:
+        techtransfer = f.read()
+
     with open(papers_md, "r") as f:
         papers = f.read()
 
@@ -111,8 +168,13 @@ if __name__ == "__main__":
     experience_html_list = parse_experience(experience)
     experience_html = "\n".join(experience_html_list)
 
+    techtransfer_html_list = parse_techtransfer(techtransfer)
+    techtransfer_html_column1 = "\n".join(techtransfer_html_list[0::2])
+    techtransfer_html_column2 = "\n".join(techtransfer_html_list[1::2])
+
     papers_html_list = parse_papers(papers)
     papers_html = "\n".join(papers_html_list)
+
 
     with open("index.html", "w") as f:
         f.write(
@@ -120,6 +182,8 @@ if __name__ == "__main__":
                 presentation=presentation_html,
                 experience=experience_html,
                 papers=papers_html,
+                techtransfers_column1=techtransfer_html_column1,
+                techtransfers_column2=techtransfer_html_column2,
                 service=service_html,
             )
         )

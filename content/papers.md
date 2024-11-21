@@ -6,6 +6,7 @@
 _Yun-Chun Chen, Selena Ling, Zhiqin Chen, Vladimir G. Kim, **Matheus Gadelha**, Alec Jacobson_
 
 [[Pre-print](https://arxiv.org/pdf/2406.01592)]
+[[Project Page](https://text-mesh-refinement-project.github.io/)]
 :::
 
 :::paper
