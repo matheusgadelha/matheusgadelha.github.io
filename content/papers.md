@@ -1,4 +1,27 @@
 :::paper
+![](fig/motionmodes.gif)
+[[[ArXiv]]]
+**Motion Modes: What Could Happen Next?**
+
+_Karran Pandey, **Matheus Gadelha**, Yannick Hold-Geoffroy, Karan Singh, Niloy J. Mitra, Paul Guerrero_
+
+[[Pre-print](https://motionmodes.github.io/resources/MotionModes.pdf)]
+[[Project Page](https://motionmodes.github.io/)]
+:::
+
+:::paper
+![](fig/instant3dit.png)
+[[[ArXiv]]]
+**Instant3dit: Multiview Inpainting for Fast Editing of 3D Objects**
+
+_Amir Barda, **Matheus Gadelha**, Vladimir Kim, Noam Aigerman, Amit Haim Bermano, Thibault Groueix_
+
+[[Pre-print](https://arxiv.org/pdf/2412.00518.pdf)]
+[[Project Page](https://amirbarda.github.io/Instant3dit.github.io/)]
+:::
+
+
+:::paper
 ![](fig/mesh_refinement.png)
 [[[SIGGRAPH Asia 2024]]]
 **Text-guided Controllable Mesh Refinement for Interactive 3D Modeling**
