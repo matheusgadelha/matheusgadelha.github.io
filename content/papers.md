@@ -1,4 +1,15 @@
 :::paper
+![](fig/dmeshpp.png)
+[[[ArXiv]]]
+**DMesh++: An Efficient Differentiable Mesh for Complex Shapes**
+
+_Sanghyun Son, **Matheus Gadelha**, Yang Zhou, Matthew Fisher, Zexiang Xu, Ming C. Lin, Yi Zhou_
+
+[[Pre-print](https://arxiv.org/pdf/2412.16776)]
+[[Project Page](https://sonsang.github.io/dmesh2-project/)]
+:::
+
+:::paper
 ![](fig/motionmodes.gif)
 [[[ArXiv]]]
 **Motion Modes: What Could Happen Next?**
@@ -35,7 +46,6 @@ _Yun-Chun Chen, Selena Ling, Zhiqin Chen, Vladimir G. Kim, **Matheus Gadelha**, 
 :::paper
 ![](fig/dmesh_teaser.gif)
 [[[NeurIPS 2024]]]
-
 **DMesh: A Differentiable Representation for General Meshes**
 
 _Sanghyun Son, **Matheus Gadelha**, Yang Zhou, Zexiang Xu, Ming C. Lin, Yi Zhou_
