@@ -1,4 +1,16 @@
 :::paper
+![](fig/precisecam.png)
+[[[ArXiv]]]
+**PreciseCam: Precise Camera Control for Text-to-Image Generation**
+
+_Edurne Bernal-Berdun, Ana Serrano, Belen Masia, **Matheus Gadelha**, Yannick Hold-Geoffroy, Xin Sun, Diego Gutierrez_
+
+[[Pre-print](https://arxiv.org/pdf/2501.12910)]
+[[Project Page](https://graphics.unizar.es/projects/PreciseCam2024/)]
+:::
+
+
+:::paper
 ![](fig/dmeshpp.png)
 [[[ArXiv]]]
 **DMesh++: An Efficient Differentiable Mesh for Complex Shapes**
