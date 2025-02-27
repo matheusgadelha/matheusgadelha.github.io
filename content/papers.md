@@ -1,16 +1,4 @@
 :::paper
-![](fig/precisecam.png)
-[[[ArXiv]]]
-**PreciseCam: Precise Camera Control for Text-to-Image Generation**
-
-_Edurne Bernal-Berdun, Ana Serrano, Belen Masia, **Matheus Gadelha**, Yannick Hold-Geoffroy, Xin Sun, Diego Gutierrez_
-
-[[Pre-print](https://arxiv.org/pdf/2501.12910)]
-[[Project Page](https://graphics.unizar.es/projects/PreciseCam2024/)]
-:::
-
-
-:::paper
 ![](fig/dmeshpp.png)
 [[[ArXiv]]]
 **DMesh++: An Efficient Differentiable Mesh for Complex Shapes**
@@ -21,9 +9,22 @@ _Sanghyun Son, **Matheus Gadelha**, Yang Zhou, Matthew Fisher, Zexiang Xu, Ming 
 [[Project Page](https://sonsang.github.io/dmesh2-project/)]
 :::
 
+
+:::paper
+![](fig/precisecam.png)
+[[[CVPR 2025]]]
+**PreciseCam: Precise Camera Control for Text-to-Image Generation**
+
+_Edurne Bernal-Berdun, Ana Serrano, Belen Masia, **Matheus Gadelha**, Yannick Hold-Geoffroy, Xin Sun, Diego Gutierrez_
+
+[[Pre-print](https://arxiv.org/pdf/2501.12910)]
+[[Project Page](https://graphics.unizar.es/projects/PreciseCam2024/)]
+:::
+
+
 :::paper
 ![](fig/motionmodes.gif)
-[[[ArXiv]]]
+[[[CVPR 2025]]]
 **Motion Modes: What Could Happen Next?**
 
 _Karran Pandey, **Matheus Gadelha**, Yannick Hold-Geoffroy, Karan Singh, Niloy J. Mitra, Paul Guerrero_
@@ -34,7 +35,7 @@ _Karran Pandey, **Matheus Gadelha**, Yannick Hold-Geoffroy, Karan Singh, Niloy J
 
 :::paper
 ![](fig/instant3dit.png)
-[[[ArXiv]]]
+[[[CVPR 2025]]]
 **Instant3dit: Multiview Inpainting for Fast Editing of 3D Objects**
 
 _Amir Barda, **Matheus Gadelha**, Vladimir Kim, Noam Aigerman, Amit Haim Bermano, Thibault Groueix_
