@@ -1,6 +1,6 @@
 I worked/am working as a reviewer for the following venues:
 
-* SIGGRAPH 2023, 2024
+* SIGGRAPH 2023-2025
 * CVPR 2018-2024 (**2021 outstanding reviewer**)
 * ICCV 2019-2023
 * ECCV 2018-2023
