@@ -1,4 +1,15 @@
 :::paper
+![](fig/innout.gif)
+[[[ArXiv]]]
+**Frame In-N-Out: Unbounded Controllable Image-to-Video Generation**
+
+_Boyang Wang, Xuweiyi Chen, **Matheus Gadelha**, Zezhou Cheng_
+
+[[Pre-print](https://arxiv.org/abs/2505.21491)]
+[[Project Page](https://uva-computer-vision-lab.github.io/Frame-In-N-Out/)]
+:::
+
+:::paper
 ![](fig/teaser_3dfixup.gif)
 [[[SIGGRAPH 2025]]]
 **3D-Fixup: Advancing Photo Editing with 3D Priors**
@@ -7,7 +18,6 @@ _Yen-Chi Cheng, Krishna Kumar Singh, Jae Shin Yoon, Alex Schwing, Liangyan Gui, 
 
 [[Project Page](https://3dfixup.github.io/)]
 :::
-
 
 :::paper
 ![](fig/dmeshpp.png)
