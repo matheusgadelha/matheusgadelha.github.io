@@ -1,4 +1,16 @@
 :::paper
+![](fig/dmeshpp.png)
+[[[ICCV 2025]]]
+**DMesh++: An Efficient Differentiable Mesh for Complex Shapes**
+
+_Sanghyun Son, **Matheus Gadelha**, Yang Zhou, Matthew Fisher, Zexiang Xu, Ming C. Lin, Yi Zhou_
+
+[[Pre-print](https://arxiv.org/pdf/2412.16776)]
+[[Project Page](https://sonsang.github.io/dmesh2-project/)]
+:::
+
+
+:::paper
 ![](fig/innout.gif)
 [[[ArXiv]]]
 **Frame In-N-Out: Unbounded Controllable Image-to-Video Generation**
@@ -17,17 +29,6 @@ _Boyang Wang, Xuweiyi Chen, **Matheus Gadelha**, Zezhou Cheng_
 _Yen-Chi Cheng, Krishna Kumar Singh, Jae Shin Yoon, Alex Schwing, Liangyan Gui, **Matheus Gadelha**, Paul Guerrero, Nanxuan Zhao_
 
 [[Project Page](https://3dfixup.github.io/)]
-:::
-
-:::paper
-![](fig/dmeshpp.png)
-[[[ArXiv]]]
-**DMesh++: An Efficient Differentiable Mesh for Complex Shapes**
-
-_Sanghyun Son, **Matheus Gadelha**, Yang Zhou, Matthew Fisher, Zexiang Xu, Ming C. Lin, Yi Zhou_
-
-[[Pre-print](https://arxiv.org/pdf/2412.16776)]
-[[Project Page](https://sonsang.github.io/dmesh2-project/)]
 :::
 
 
