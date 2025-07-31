@@ -306,7 +306,7 @@ _Zezhou Cheng, **Matheus Gadelha**, Subhransu Maji, Daniel Sheldon_
 :::
 
 :::paper
-![ ](https://people.cs.umass.edu/~jcsu/papers/shape_recog/advers_examples.png )
+![ ](fig/3dsc.png)
 [[[ECCV 2018 - 3DRMS Workshop]]]
 
 **A Deeper Look at 3D Shape Classifiers**
