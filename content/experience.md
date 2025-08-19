@@ -2,7 +2,7 @@
 ![](fig/adobe_logo.png)
 **Adobe**.
 
-Research Scientist at San Jose, CA.
+Research Scientist (Seattle, WA).
 
 _June 2021 - Now_.
 :::
@@ -11,7 +11,7 @@ _June 2021 - Now_.
 ![](fig/google_logo.png)
 **Google (Perception)**. 
 
-Research Intern in Amherst, MA. 
+Research Intern (Amherst, MA). 
 
 _Summer 2020_.
 :::
@@ -20,7 +20,7 @@ _Summer 2020_.
 ![](fig/adobe_logo.png)
 **Adobe**.
 
-Research Intern at San Jose, CA
+Research Intern (San Jose, CA)
 
 _Summer 2019_.
 :::
@@ -29,7 +29,7 @@ _Summer 2019_.
 ![](fig/amazon_logo.png)
 **Amazon**. 
 
-Applied Scientist Intern at Pasadena, CA. 
+Applied Scientist Intern (Pasadena, CA)
 
 _Summer 2018_.
 :::
