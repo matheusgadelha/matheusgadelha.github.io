@@ -1,4 +1,26 @@
 :::paper
+![](fig/innout.gif)
+[[[NeurIPS 2025]]]
+**Frame In-N-Out: Unbounded Controllable Image-to-Video Generation**
+
+_Boyang Wang, Xuweiyi Chen, **Matheus Gadelha**, Zezhou Cheng_
+
+[[Pre-print](https://arxiv.org/abs/2505.21491)]
+[[Project Page](https://uva-computer-vision-lab.github.io/Frame-In-N-Out/)]
+:::
+
+:::paper
+![](fig/hierarchical_diffusion.png)
+[[[ICCV 2025]]]
+**Reusing Computation in Text‑to‑Image Diffusion for Efficient Generation of Image Sets**
+
+_Dale Decatur, Thibault Groueix, Yifan Wang, Rana Hanocka, Vova Kim, **Matheus Gadelha**_
+
+[[Pre-print](http://arxiv.org/pdf/2508.21032)]
+[[Project Page](https://ddecatur.github.io/hierarchical-diffusion/)]
+:::
+
+:::paper
 ![](fig/dmeshpp.png)
 [[[ICCV 2025]]]
 **DMesh++: An Efficient Differentiable Mesh for Complex Shapes**
@@ -7,18 +29,6 @@ _Sanghyun Son, **Matheus Gadelha**, Yang Zhou, Matthew Fisher, Zexiang Xu, Ming 
 
 [[Pre-print](https://arxiv.org/pdf/2412.16776)]
 [[Project Page](https://sonsang.github.io/dmesh2-project/)]
-:::
-
-
-:::paper
-![](fig/innout.gif)
-[[[ArXiv]]]
-**Frame In-N-Out: Unbounded Controllable Image-to-Video Generation**
-
-_Boyang Wang, Xuweiyi Chen, **Matheus Gadelha**, Zezhou Cheng_
-
-[[Pre-print](https://arxiv.org/abs/2505.21491)]
-[[Project Page](https://uva-computer-vision-lab.github.io/Frame-In-N-Out/)]
 :::
 
 :::paper

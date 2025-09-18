@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Generate index.html",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/compile_page.py",
+      "cwd": "${workspaceFolder}",
+      "args": [
+        "content/template.html"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}
