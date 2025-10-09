@@ -1,4 +1,15 @@
 :::paper
+![](fig/sigmagen.gif)
+[[[ArXiv]]]
+**SIGMA-Gen: Structure and Identity Guided Multi-subject Assembly for Image Generation**
+
+_Oindrila Saha, Vojtech Krs, Radomir Mech, Subhransu Maji, Kevin Blackburn-Matzen`*`, **Matheus Gadelha**`*`_
+
+[[Pre-print](https://arxiv.org/abs/2510.06469/)]
+[[Project Page](https://oindrilasaha.github.io/SIGMA-Gen/)]
+:::
+
+:::paper
 ![](fig/innout.gif)
 [[[NeurIPS 2025]]]
 **Frame In-N-Out: Unbounded Controllable Image-to-Video Generation**
