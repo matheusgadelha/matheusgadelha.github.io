@@ -12,14 +12,14 @@ large generative models so we can properly control them and robustly create/unde
 3D data. I am also broadly interested in techniques (not necessarily ML-based) that allow us
 to better manipulate and author 3D content.
 
-Latest on my research:
-
-* [Directing Image Generative Models.](directing_image_gen_models.html)
-
 **Internships for PhD students:** If you are interested in related areas to the ones I've mentioned above (or anything
 related to my previous research), don't be shy and send me an e-mail with your CV and a short
 description of the problems you are interested in working on. We are always looking for talented
 interns to join us at Adobe Research.
+
+**Pro-bono Mentoring:** If you are a student/early-career researcher/enthusiast seeking advice on research projects
+or general career directions, you can use [this link](https://outlook.office.com/book/Mentoring2@adobe.onmicrosoft.com/) to schedule a chat with me.
+I am particularly interested in chatting with folks from South/Latin America and helping in any way I can.
 
 **Academic Collaborations:** If you are a professor or a student interested in working with me,
 feel free to send me an e-mail -- I am more than happy to discuss interesting research problems we
