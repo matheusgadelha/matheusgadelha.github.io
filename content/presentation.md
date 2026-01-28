@@ -1,5 +1,5 @@
 
-I am currently a Research Scientist at [Adobe Research](https://research.adobe.com/).
+I am currently a Senior Research Scientist at [Adobe Research](https://research.adobe.com/).
 I received my PhD from [University of Massachusetts - Amherst](https://www.cics.umass.edu/)
 while being supervised by [Prof. Rui Wang](https://people.cs.umass.edu/~ruiwang/) and 
 [Prof. Subhransu Maji](http://people.cs.umass.edu/~smaji/).

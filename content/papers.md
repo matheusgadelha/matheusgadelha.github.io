@@ -1,12 +1,34 @@
 :::paper
-![](fig/sigmagen.gif)
+![](fig/superfit_teaser.png)
 [[[ArXiv]]]
+**Residual Primitive Fitting of 3D Shapes with SuperFrusta**
+
+_Aditya Ganeshan, **Matheus Gadelha**, Thibault Groueix, Zhiqin Chen, Siddhartha Chaudhuri, Vladimir Kim, Wang Yifan, Daniel Ritchie_
+
+[[Pre-print](https://arxiv.org/pdf/2512.09201)]
+[[Project Page](https://bardofcodes.github.io/superfit/)]
+:::
+
+:::paper
+![](fig/sigmagen.gif)
+[[[ICLR 2026]]]
 **SIGMA-Gen: Structure and Identity Guided Multi-subject Assembly for Image Generation**
 
 _Oindrila Saha, Vojtech Krs, Radomir Mech, Subhransu Maji, Kevin Blackburn-Matzen`*`, **Matheus Gadelha**`*`_
 
 [[Pre-print](https://arxiv.org/abs/2510.06469/)]
 [[Project Page](https://oindrilasaha.github.io/SIGMA-Gen/)]
+:::
+
+:::paper
+![](fig/meshsplatting.gif)
+[[[ArXiv]]]
+**MeshSplatting: Differentiable Rendering with Opaque Meshes**
+
+_Jan Held, Sanghyun Son, Renaud Vandeghen, Daniel Rebain, **Matheus Gadelha**, Yi Zhou, Anthony Cioppa, Ming C. Lin, Marc Van Droogenbroeck, Andrea Tagliasacchi_
+
+[[Pre-print](https://arxiv.org/abs/2512.06818)]
+[[Project Page](https://meshsplatting.github.io/)]
 :::
 
 :::paper
