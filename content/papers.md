@@ -21,6 +21,17 @@ _Oindrila Saha, Vojtech Krs, Radomir Mech, Subhransu Maji, Kevin Blackburn-Matze
 :::
 
 :::paper
+![](fig/stc_teaset.png)
+[[[3DV 2026]]]
+**Seeing Through Clutter: Structured 3D Scene Reconstruction via Iterative Object Removal**
+
+_Rio Aguina-Kang, Kevin Blackburn-Matzen, Thibault Groueix, Vladimir Kim, **Matheus Gadelha**_
+
+[[Pre-print](https://arxiv.org/abs/2602.04053)]
+:::
+
+
+:::paper
 ![](fig/meshsplatting.gif)
 [[[ArXiv]]]
 **MeshSplatting: Differentiable Rendering with Opaque Meshes**
