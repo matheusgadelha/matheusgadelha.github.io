@@ -1,4 +1,16 @@
 :::paper
+![](fig/scratchpad.png)
+[[[ArXiv]]]
+**3D Space as a Scratchpad for Editable Text-to-Image Generation**
+
+_Oindrila Saha, Vojtech Krs, Radomir Mech, Subhransu Maji, **Matheus Gadelha**`*`, Kevin Blackburn-Matzen`*`_
+
+[[Pre-print](https://arxiv.org/abs/2601.14602)]
+[[Project Page](https://oindrilasaha.github.io/3DScratchpad/)]
+:::
+
+
+:::paper
 ![](fig/superfit_teaser.png)
 [[[ArXiv]]]
 **Residual Primitive Fitting of 3D Shapes with SuperFrusta**
