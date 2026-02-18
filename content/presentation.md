@@ -25,7 +25,7 @@ I am particularly interested in chatting with folks from South/Latin America and
 feel free to send me an e-mail -- I am more than happy to discuss interesting research problems we
 could work on together (or even just to chat about research).
 
-[[CV](cv.pdf)]
+[[CV](cv_source/cv.pdf)]
 [[bluesky](https://bsky.app/profile/gadelha.bsky.social)]
 [[linkedin](https://www.linkedin.com/in/matheusgadelha/)]
 [[email](mailto:matheusabrantesgadelha@gmail.com)]
