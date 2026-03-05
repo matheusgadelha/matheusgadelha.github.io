@@ -1,6 +1,17 @@
 :::paper
+![](fig/superfit_teaser.png)
+[[[CVPR 2026]]]
+**Residual Primitive Fitting of 3D Shapes with SuperFrusta**
+
+_Aditya Ganeshan, **Matheus Gadelha**, Thibault Groueix, Zhiqin Chen, Siddhartha Chaudhuri, Vladimir Kim, Wang Yifan, Daniel Ritchie_
+
+[[Pre-print](https://arxiv.org/pdf/2512.09201)]
+[[Project Page](https://bardofcodes.github.io/superfit/)]
+:::
+
+:::paper
 ![](fig/scratchpad.png)
-[[[ArXiv]]]
+[[[CVPR 2026]]]
 **3D Space as a Scratchpad for Editable Text-to-Image Generation**
 
 _Oindrila Saha, Vojtech Krs, Radomir Mech, Subhransu Maji, **Matheus Gadelha**`*`, Kevin Blackburn-Matzen`*`_
@@ -9,16 +20,15 @@ _Oindrila Saha, Vojtech Krs, Radomir Mech, Subhransu Maji, **Matheus Gadelha**`*
 [[Project Page](https://oindrilasaha.github.io/3DScratchpad/)]
 :::
 
-
 :::paper
-![](fig/superfit_teaser.png)
-[[[ArXiv]]]
-**Residual Primitive Fitting of 3D Shapes with SuperFrusta**
+![](fig/meshsplatting.gif)
+[[[CVPR 2026]]]
+**MeshSplatting: Differentiable Rendering with Opaque Meshes**
 
-_Aditya Ganeshan, **Matheus Gadelha**, Thibault Groueix, Zhiqin Chen, Siddhartha Chaudhuri, Vladimir Kim, Wang Yifan, Daniel Ritchie_
+_Jan Held, Sanghyun Son, Renaud Vandeghen, Daniel Rebain, **Matheus Gadelha**, Yi Zhou, Anthony Cioppa, Ming C. Lin, Marc Van Droogenbroeck, Andrea Tagliasacchi_
 
-[[Pre-print](https://arxiv.org/pdf/2512.09201)]
-[[Project Page](https://bardofcodes.github.io/superfit/)]
+[[Pre-print](https://arxiv.org/abs/2512.06818)]
+[[Project Page](https://meshsplatting.github.io/)]
 :::
 
 :::paper
@@ -40,18 +50,6 @@ _Oindrila Saha, Vojtech Krs, Radomir Mech, Subhransu Maji, Kevin Blackburn-Matze
 _Rio Aguina-Kang, Kevin Blackburn-Matzen, Thibault Groueix, Vladimir Kim, **Matheus Gadelha**_
 
 [[Pre-print](https://arxiv.org/abs/2602.04053)]
-:::
-
-
-:::paper
-![](fig/meshsplatting.gif)
-[[[ArXiv]]]
-**MeshSplatting: Differentiable Rendering with Opaque Meshes**
-
-_Jan Held, Sanghyun Son, Renaud Vandeghen, Daniel Rebain, **Matheus Gadelha**, Yi Zhou, Anthony Cioppa, Ming C. Lin, Marc Van Droogenbroeck, Andrea Tagliasacchi_
-
-[[Pre-print](https://arxiv.org/abs/2512.06818)]
-[[Project Page](https://meshsplatting.github.io/)]
 :::
 
 :::paper
