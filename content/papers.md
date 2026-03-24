@@ -1,4 +1,15 @@
 :::paper
+![](fig/magicwand.png)
+[[[CVPR 2026]]]
+**Material Magic Wand: Material-Aware Grouping of 3D Parts in Untextured Meshes**
+
+_Umangi Jain, Vladimir Kim, **Matheus Gadelha**, Igor Gilitschenski, Zhiqin Chen_
+
+[[Pre-print](https://umangi-jain.github.io/material-magic-wand/static/pdfs/paper.pdf)]
+[[Project Page](https://umangi-jain.github.io/material-magic-wand/)]
+:::
+
+:::paper
 ![](fig/superfit_teaser.png)
 [[[CVPR 2026]]]
 **Residual Primitive Fitting of 3D Shapes with SuperFrusta**
