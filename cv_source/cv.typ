@@ -147,21 +147,27 @@
 #set enum(numbering: "1.", tight: true)
 
 + #paper(
+    "Material Magic Wand: Material-Aware Grouping of 3D Parts in Untextured Meshes",
+    [Umangi Jain, Vladimir Kim, #my-name, Igor Gilitschenski, Zhiqin Chen],
+    cvpr(2026)
+  )
+
++ #paper(
     "3D Space as a Scratchpad for Editable Text-to-Image Generation",
     [Oindrila Saha, Vojtech Krs, Radomir Mech, Subhransu Maji, #my-name\*, Kevin Blackburn-Matzen\*],
-    arxiv
+    cvpr(2026)
   )
 
 + #paper(
     "Residual Primitive Fitting of 3D Shapes with SuperFrusta",
     [Aditya Ganeshan, #my-name, Thibault Groueix, Zhiqin Chen, Siddhartha Chaudhuri, Vladimir Kim, Wang Yifan, Daniel Ritchie],
-    arxiv
+    cvpr(2026)
   )
 
 + #paper(
     "MeshSplatting: Differentiable Rendering with Opaque Meshes",
     [Jan Held, Sanghyun Son, Renaud Vandeghen, Daniel Rebain, #my-name, Yi Zhou, Anthony Cioppa, Ming C. Lin, Marc Van Droogenbroeck, Andrea Tagliasacchi],
-    arxiv
+    cvpr(2026)
   )
 
 + #paper(
