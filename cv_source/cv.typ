@@ -160,7 +160,7 @@
 
 + #paper(
     "Residual Primitive Fitting of 3D Shapes with SuperFrusta",
-    [Aditya Ganeshan, #my-name, Thibault Groueix, Zhiqin Chen, Siddhartha Chaudhuri, Vladimir Kim, Wang Yifan, Daniel Ritchie],
+    [Aditya Ganeshan, #my-name, Thibault Groueix, Zhiqin Chen, Siddhartha Chaudhuri, Vladimir Kim, Wang Yifan, Daniel Ritchie. #text(fill: rgb(accent-color))[*Best paper award candidate*].],
     cvpr(2026)
   )
 
