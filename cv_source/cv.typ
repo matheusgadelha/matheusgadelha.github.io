@@ -386,6 +386,27 @@
 - Reviewer for IJCV 2022, 2024
 - Graduate Student Representative at CICS -- UMass Amherst, 2019-2020
 
+== Mentoring
+
+Research interns mentored/co-mentored at Adobe Research:
+
+- Umangi Jain (University of Toronto)
+- Aditya Ganeshan (Brown University)
+- Oindrila Saha (UMass Amherst) -- now Research Scientist at Adobe Research
+- Rio Aguina-Kang (UC San Diego) -- now at Drafted
+- Dale Decatur (University of Chicago)
+- Yen-Chi Cheng (UIUC)
+- Sanghyun Son (University of Maryland) -- now at Genesis AI
+- Karran Pandey (University of Toronto)
+- Amir Barda (Tel Aviv University)
+- Edurne Bernal-Berdun (Universidad de Zaragoza)
+- Shengqu Cai (ETH Zürich) -- now PhD student at Stanford University
+- Leticia Mattos (MIT)
+- Dima Petrov (UMass Amherst) -- now at Foundation AGI
+- Ta-Ying Cheng (Oxford) -- now at Netflix
+- Yun-Chun Chen (University of Toronto) -- now at Adobe Firefly Foundry
+- Marissa Ramirez de Chanlatte (UC Berkeley) -- now at Playground Global
+
 == Teaching Experience
 
 #work(

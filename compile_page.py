@@ -130,6 +130,30 @@ def parse_papers(papers_md: str) -> List[str]:
     return papers
 
 
+def parse_interns(interns_md: str) -> List[str]:
+    pattern = r":::intern\s*(.*?)\s*:::"
+    matches = re.findall(pattern, interns_md, re.DOTALL | re.MULTILINE)
+
+    interns = []
+
+    for match in matches:
+        lines = match.strip().splitlines()
+        main_lines = [l for l in lines if not l.strip().startswith("now at")]
+        now_at_lines = [l.strip()[len("now at"):].strip() for l in lines if l.strip().startswith("now at")]
+
+        main_md = markdown.markdown(" ".join(main_lines).strip())
+        main_md = re.sub(r"^<p>(.*)</p>$", r"\1", main_md, flags=re.DOTALL)
+
+        if now_at_lines:
+            now_at_md = markdown.markdown(now_at_lines[0])
+            now_at_md = re.sub(r"^<p>(.*)</p>$", r"\1", now_at_md, flags=re.DOTALL)
+            interns.append(f"<li>{main_md}<br><small>now at {now_at_md}</small></li>")
+        else:
+            interns.append(f"<li>{main_md}</li>")
+
+    return interns
+
+
 arg_parser = argparse.ArgumentParser(
     description="Compile webpage contents into html file"
 )
@@ -141,6 +165,7 @@ experience_md = os.path.join("content", "experience.md")
 techtransfer_md = os.path.join("content", "techtransfer.md")
 papers_md = os.path.join("content", "papers.md")
 service_md = os.path.join("content", "service.md")
+interns_md = os.path.join("content", "interns.md")
 
 if __name__ == "__main__":
     args = arg_parser.parse_args()
@@ -166,6 +191,9 @@ if __name__ == "__main__":
     with open(service_md, "r") as f:
         service = f.read()
 
+    with open(interns_md, "r") as f:
+        interns = f.read()
+
     presentation_html = markdown.markdown(presentation)
     tt_preable_html = markdown.markdown(tt_preamble)
     service_html = markdown.markdown(service)
@@ -180,6 +208,10 @@ if __name__ == "__main__":
     papers_html_list = parse_papers(papers)
     papers_html = "\n".join(papers_html_list)
 
+    interns_html_list = parse_interns(interns)
+    interns_html_column1 = "\n".join(interns_html_list[0::3])
+    interns_html_column2 = "\n".join(interns_html_list[1::3])
+    interns_html_column3 = "\n".join(interns_html_list[2::3])
 
     with open("index.html", "w") as f:
         f.write(
@@ -191,5 +223,8 @@ if __name__ == "__main__":
                 techtransfers_column1=techtransfer_html_column1,
                 techtransfers_column2=techtransfer_html_column2,
                 service=service_html,
+                interns_column1=interns_html_column1,
+                interns_column2=interns_html_column2,
+                interns_column3=interns_html_column3,
             )
         )
