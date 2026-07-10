@@ -20,7 +20,15 @@
   paper: "us-letter",
   author-position: center,
   personal-info-position: center,
+  font-size: 9.5pt,
+  author-font-size: 18pt,
 )
+
+// Tighten spacing beyond the package defaults
+#set par(leading: 0.45em, spacing: 0.5em)
+#set block(spacing: 0.55em)
+#set list(tight: true, spacing: 0.3em)
+#set enum(tight: false, spacing: 1em)
 
 == Education
 
@@ -121,9 +129,12 @@
 == Papers
 
 #let my-name = [*Matheus Gadelha*]
-#let paper(title, authors, venue) = {
-  text(fill: rgb(accent-color))[#title] + [ \ ] + authors + [ \ ] + text(style: "italic")[#venue]
-}
+#let paper(title, authors, venue) = block(above: 0em, below: 0em)[
+  #set par(leading: 0.3em, spacing: 0em)
+  #text(fill: rgb(accent-color))[#title]\
+  #authors\
+  #text(style: "italic")[#venue]
+]
 
 // Conference Macros
 #let arxiv = "ArXiv"
@@ -139,12 +150,19 @@
 #let sgp(year) = [Symposium on Geometry Processing (SGP), #year]
 #let aivr(year) = [IEEE International Conference on Artificial Intelligence and Virtual Reality (AIVR), #year]
 #let eccv(year) = [European Conference on Computer Vision (ECCV), #year]
+#let dis(year) = [ACM Conference on Designing Interactive Systems (DIS), #year]
 #let ijcv = [International Journal of Computer Vision (IJCV)]
 #let bmvc(year) = [British Machine Vision Conference (BMVC), #year]
 #let icpr(year) = [International Conference on Pattern Recognition (ICPR), #year]
 
 // Using enum for a numbered list, styled appropriately
 #set enum(numbering: "1.", tight: true)
+
++ #paper(
+    "GimbalDiffusion: Gravity-Aware Camera Control for Video Generation",
+    [Frédéric Fortier-Chouinard, Yannick Hold-Geoffroy, Valentin Deschaintre, #my-name, Jean-François Lalonde],
+    eccv(2026)
+  )
 
 + #paper(
     "Material Magic Wand: Material-Aware Grouping of 3D Parts in Untextured Meshes",
@@ -180,6 +198,12 @@
     "Seeing Through Clutter: Structured 3D Scene Reconstruction via Iterative Object Removal",
     [Rio Aguina-Kang, Kevin Blackburn-Matzen, Thibault Groueix, Vladimir Kim, #my-name],
     threedv(2026)
+  )
+
++ #paper(
+    "DepthScape: Authoring 2.5D Designs via Depth Estimation, Semantic Understanding, and Geometry Extraction",
+    [Xia Su, Cuong Nguyen, #my-name, Jon E. Froehlich],
+    dis(2026)
   )
 
 + #paper(

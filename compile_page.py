@@ -116,9 +116,10 @@ def parse_papers(papers_md: str) -> List[str]:
             match = re.sub(preprint_link_pattern, "", match)
             preprint_tag = f'<a href={preprint_link}><i class="fa-solid fa-file-pdf"></i></a>'
 
-        md = markdown.markdown(match)
-        # for every img tag in md string, make max-width 150px
+        md = markdown.markdown(match, extensions=['md_in_html'])
+        # for every img or video tag in md string, add float-left class
         md = re.sub(r"<img", "<img class='float-left'", md)
+        md = re.sub(r"<video", "<video class='float-left'", md)
 
         linktag = f'<footer>{preprint_tag} &nbsp;&nbsp;&nbsp; {project_tag}</footer>'
 

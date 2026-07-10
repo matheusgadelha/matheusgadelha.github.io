@@ -1,4 +1,15 @@
 :::paper
+<video autoplay loop muted playsinline><source src="fig/medieval_trans_z_forward_trans.mp4" type="video/mp4"></video>
+[[[ECCV 2026]]]
+**GimbalDiffusion: Gravity-Aware Camera Control for Video Generation**
+
+_Frédéric Fortier-Chouinard, Yannick Hold-Geoffroy, Valentin Deschaintre, **Matheus Gadelha**, Jean-François Lalonde_
+
+[[Pre-print](https://arxiv.org/abs/2512.09112)]
+[[Project Page](https://lvsn.github.io/GimbalDiffusion/)]
+:::
+
+:::paper
 ![](fig/magicwand.png)
 [[[CVPR 2026]]]
 **Material Magic Wand: Material-Aware Grouping of 3D Parts in Untextured Meshes**
@@ -61,6 +72,16 @@ _Oindrila Saha, Vojtech Krs, Radomir Mech, Subhransu Maji, Kevin Blackburn-Matze
 _Rio Aguina-Kang, Kevin Blackburn-Matzen, Thibault Groueix, Vladimir Kim, **Matheus Gadelha**_
 
 [[Pre-print](https://arxiv.org/abs/2602.04053)]
+:::
+
+:::paper
+![](fig/depthscape.jpg)
+[[[ACM DIS 2026]]]
+**DepthScape: Authoring 2.5D Designs via Depth Estimation, Semantic Understanding, and Geometry Extraction**
+
+_Xia Su, Cuong Nguyen, **Matheus Gadelha**, Jon E. Froehlich_
+
+[[Pre-print](https://arxiv.org/abs/2512.02263)]
 :::
 
 :::paper
