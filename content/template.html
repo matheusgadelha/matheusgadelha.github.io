@@ -17,17 +17,70 @@
       .float-left {{
         float: left;
         block: block;
-        margin-right: 1rem;
-        margin-bottom: 1rem;
+        margin-right: 0.75rem;
+        margin-bottom: 0.5rem;
         max-width: 150px;
+        max-height: 150px;
       }}
 
       article {{
         overflow: hidden;
+        --pico-block-spacing-vertical: 0.6rem;
+        --pico-block-spacing-horizontal: 0.85rem;
+        --pico-typography-spacing-vertical: 0.4rem;
       }}
 
-      footer {{
-        clear: both;
+      article > *:last-child {{
+        margin-bottom: 0;
+      }}
+
+      .card-body > *:last-child {{
+        margin-bottom: 0;
+      }}
+
+      .card-header {{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-shrink: 0;
+      }}
+
+      .card-header .card-links {{
+        white-space: nowrap;
+      }}
+
+      .paper-card,
+      .tech-card {{
+        display: flex;
+        flex-direction: column;
+      }}
+
+      .paper-card .card-body,
+      .tech-card .card-body {{
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 100%;
+        overflow: hidden;
+      }}
+
+      .paper-card {{
+        min-height: 210px;
+      }}
+
+      .tech-grid {{
+        grid-template-columns: 1fr;
+        align-items: stretch;
+      }}
+
+      .tech-grid > .tech-card {{
+        margin-bottom: 0;
+      }}
+
+      @media (min-width: 768px) {{
+        .tech-grid {{
+          grid-template-columns: repeat(2, 1fr);
+        }}
       }}
 
       @media (max-width: 768px) {{
@@ -80,13 +133,8 @@
 
       <h2 id="techtransfer">Software</h2>
       {tt_preamble}
-      <div class="grid">
-        <div>
-          {techtransfers_column1}
-        </div>
-        <div>
-          {techtransfers_column2}
-        </div>
+      <div class="grid tech-grid">
+        {techtransfers}
       </div>
 
       <h2 id="papers">Papers</h2>

@@ -17,17 +17,70 @@
       .float-left {
         float: left;
         block: block;
-        margin-right: 1rem;
-        margin-bottom: 1rem;
+        margin-right: 0.75rem;
+        margin-bottom: 0.5rem;
         max-width: 150px;
+        max-height: 150px;
       }
 
       article {
         overflow: hidden;
+        --pico-block-spacing-vertical: 0.6rem;
+        --pico-block-spacing-horizontal: 0.85rem;
+        --pico-typography-spacing-vertical: 0.4rem;
       }
 
-      footer {
-        clear: both;
+      article > *:last-child {
+        margin-bottom: 0;
+      }
+
+      .card-body > *:last-child {
+        margin-bottom: 0;
+      }
+
+      .card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-shrink: 0;
+      }
+
+      .card-header .card-links {
+        white-space: nowrap;
+      }
+
+      .paper-card,
+      .tech-card {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .paper-card .card-body,
+      .tech-card .card-body {
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .paper-card {
+        min-height: 210px;
+      }
+
+      .tech-grid {
+        grid-template-columns: 1fr;
+        align-items: stretch;
+      }
+
+      .tech-grid > .tech-card {
+        margin-bottom: 0;
+      }
+
+      @media (min-width: 768px) {
+        .tech-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
       }
 
       @media (max-width: 768px) {
@@ -119,394 +172,442 @@ could work on together (or even just to chat about research).</p>
       <h2 id="techtransfer">Software</h2>
       <p><em>*I did not develop these by myself, but the list of collaborators is too big to include here.
 They are the result of a big team effort.</em></p>
-      <div class="grid">
-        <div>
-          <article>
-<header>Adobe Illustrator</header>
+      <div class="grid tech-grid">
+        <article class="tech-card">
+<header class="card-header"><span class="venue">Adobe Illustrator</span><span class="card-links"> &nbsp;&nbsp;&nbsp; <a href=https://helpx.adobe.com/illustrator/using/create-art-mockups.html><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt="" src="fig/mockup_thumbnail.gif" /></p>
 <p><strong>Mockup</strong></p>
 <p>Users can apply their 2D designs into real photographs in a 3D-aware manner.</p>
-<footer> &nbsp;&nbsp;&nbsp; <a href=https://helpx.adobe.com/illustrator/using/create-art-mockups.html><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>Adobe's Project Neo</header>
-<p><img class='float-left' alt="" src="fig/Neo3D2Image.gif" /></p>
-<p><strong>3D to Image</strong></p>
-<p>Easily create 3D shapes using Project Neo and render them using a text-to-image generative model.</p>
-<footer> &nbsp;&nbsp;&nbsp; <a href=https://projectneo.adobe.com/#><i class="fa-solid fa-globe"></i></a></footer>
-</article>
-
-
-        </div>
-        <div>
-          <article>
-<header>Adobe Substance Viewer</header>
+<article class="tech-card">
+<header class="card-header"><span class="venue">Adobe Substance Viewer</span><span class="card-links"> &nbsp;&nbsp;&nbsp; <a href=https://helpx.adobe.com/substance-3d-viewer/using/gen-ai.html><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt="" src="fig/SubstanceViewer3d2Image.gif" /></p>
 <p><strong>3D to Image</strong></p>
 <p>Using image generative models to "render" a 3D scene according to a text prompt
 and style presets.</p>
-<footer> &nbsp;&nbsp;&nbsp; <a href=https://helpx.adobe.com/substance-3d-viewer/using/gen-ai.html><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-        </div>
+<article class="tech-card">
+<header class="card-header"><span class="venue">Adobe's Project Neo</span><span class="card-links"> &nbsp;&nbsp;&nbsp; <a href=https://projectneo.adobe.com/#><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
+<p><img class='float-left' alt="" src="fig/Neo3D2Image.gif" /></p>
+<p><strong>3D to Image</strong></p>
+<p>Easily create 3D shapes using Project Neo and render them using a text-to-image generative model.</p>
+</div>
+</article>
+
+
       </div>
 
       <h2 id="papers">Papers</h2>
-      <article>
-<header>ECCV 2026</header>
+      <article class="paper-card">
+<header class="card-header"><span class="venue">SIGGRAPH Asia 2026</span><span class="card-links"><a href=https://arxiv.org/abs/2604.17623><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://honglin-c.github.io/vips/><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
+<p><img class='float-left' alt="" src="fig/vips_bear.gif" /></p>
+<p><strong>ViPS: Video-informed Pose Spaces for Auto-Rigged Meshes</strong></p>
+<p><em>Honglin Chen, Karran Pandey, Rundi Wu, <strong>Matheus Gadelha</strong>, Yannick Hold-Geoffroy, Ayush Tewari, Niloy J. Mitra, Changxi Zheng, Paul Guerrero</em></p>
+</div>
+</article>
+
+
+<article class="paper-card">
+<header class="card-header"><span class="venue">ECCV 2026</span><span class="card-links"><a href=https://arxiv.org/abs/2512.09112><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://lvsn.github.io/GimbalDiffusion/><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <video class='float-left' autoplay loop muted playsinline><source src="fig/medieval_trans_z_forward_trans.mp4" type="video/mp4"></video>
 
 <p><strong>GimbalDiffusion: Gravity-Aware Camera Control for Video Generation</strong></p>
 <p><em>Frédéric Fortier-Chouinard, Yannick Hold-Geoffroy, Valentin Deschaintre, <strong>Matheus Gadelha</strong>, Jean-François Lalonde</em></p>
-<footer><a href=https://arxiv.org/abs/2512.09112><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://lvsn.github.io/GimbalDiffusion/><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>CVPR 2026</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">CVPR 2026</span><span class="card-links"><a href=https://umangi-jain.github.io/material-magic-wand/static/pdfs/paper.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://umangi-jain.github.io/material-magic-wand/><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt="" src="fig/magicwand.png" /></p>
 <p><strong>Material Magic Wand: Material-Aware Grouping of 3D Parts in Untextured Meshes</strong></p>
 <p><em>Umangi Jain, Vladimir Kim, <strong>Matheus Gadelha</strong>, Igor Gilitschenski, Zhiqin Chen</em></p>
-<footer><a href=https://umangi-jain.github.io/material-magic-wand/static/pdfs/paper.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://umangi-jain.github.io/material-magic-wand/><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>CVPR 2026</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">CVPR 2026</span><span class="card-links"><a href=https://arxiv.org/pdf/2512.09201><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://bardofcodes.github.io/superfit/><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt="" src="fig/superfit_teaser.png" /></p>
 <p><strong>Residual Primitive Fitting of 3D Shapes with SuperFrusta</strong></p>
 <p><em>Aditya Ganeshan, <strong>Matheus Gadelha</strong>, Thibault Groueix, Zhiqin Chen, Siddhartha Chaudhuri, Vladimir Kim, Wang Yifan, Daniel Ritchie</em></p>
-<footer><a href=https://arxiv.org/pdf/2512.09201><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://bardofcodes.github.io/superfit/><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>CVPR 2026</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">CVPR 2026</span><span class="card-links"><a href=https://arxiv.org/abs/2601.14602><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://oindrilasaha.github.io/3DScratchpad/><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt="" src="fig/scratchpad.png" /></p>
 <p><strong>3D Space as a Scratchpad for Editable Text-to-Image Generation</strong></p>
 <p><em>Oindrila Saha, Vojtech Krs, Radomir Mech, Subhransu Maji, <strong>Matheus Gadelha</strong><code>*</code>, Kevin Blackburn-Matzen<code>*</code></em></p>
-<footer><a href=https://arxiv.org/abs/2601.14602><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://oindrilasaha.github.io/3DScratchpad/><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>CVPR 2026</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">CVPR 2026</span><span class="card-links"><a href=https://arxiv.org/abs/2512.06818><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://meshsplatting.github.io/><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt="" src="fig/meshsplatting.gif" /></p>
 <p><strong>MeshSplatting: Differentiable Rendering with Opaque Meshes</strong></p>
 <p><em>Jan Held, Sanghyun Son, Renaud Vandeghen, Daniel Rebain, <strong>Matheus Gadelha</strong>, Yi Zhou, Anthony Cioppa, Ming C. Lin, Marc Van Droogenbroeck, Andrea Tagliasacchi</em></p>
-<footer><a href=https://arxiv.org/abs/2512.06818><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://meshsplatting.github.io/><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>ICLR 2026</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">ICLR 2026</span><span class="card-links"><a href=https://arxiv.org/abs/2510.06469/><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://oindrilasaha.github.io/SIGMA-Gen/><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt="" src="fig/sigmagen.gif" /></p>
 <p><strong>SIGMA-Gen: Structure and Identity Guided Multi-subject Assembly for Image Generation</strong></p>
 <p><em>Oindrila Saha, Vojtech Krs, Radomir Mech, Subhransu Maji, Kevin Blackburn-Matzen<code>*</code>, <strong>Matheus Gadelha</strong><code>*</code></em></p>
-<footer><a href=https://arxiv.org/abs/2510.06469/><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://oindrilasaha.github.io/SIGMA-Gen/><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>3DV 2026</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">3DV 2026</span><span class="card-links"><a href=https://arxiv.org/abs/2602.04053><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; </span></header>
+<div class="card-body">
 <p><img class='float-left' alt="" src="fig/stc_teaset.png" /></p>
 <p><strong>Seeing Through Clutter: Structured 3D Scene Reconstruction via Iterative Object Removal</strong></p>
 <p><em>Rio Aguina-Kang, Kevin Blackburn-Matzen, Thibault Groueix, Vladimir Kim, <strong>Matheus Gadelha</strong></em></p>
-<footer><a href=https://arxiv.org/abs/2602.04053><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; </footer>
+</div>
 </article>
 
 
-<article>
-<header>ACM DIS 2026</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">ACM DIS 2026</span><span class="card-links"><a href=https://arxiv.org/abs/2512.02263><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; </span></header>
+<div class="card-body">
 <p><img class='float-left' alt="" src="fig/depthscape.jpg" /></p>
 <p><strong>DepthScape: Authoring 2.5D Designs via Depth Estimation, Semantic Understanding, and Geometry Extraction</strong></p>
 <p><em>Xia Su, Cuong Nguyen, <strong>Matheus Gadelha</strong>, Jon E. Froehlich</em></p>
-<footer><a href=https://arxiv.org/abs/2512.02263><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; </footer>
+</div>
 </article>
 
 
-<article>
-<header>NeurIPS 2025</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">NeurIPS 2025</span><span class="card-links"><a href=https://arxiv.org/abs/2505.21491><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://uva-computer-vision-lab.github.io/Frame-In-N-Out/><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt="" src="fig/innout.gif" /></p>
 <p><strong>Frame In-N-Out: Unbounded Controllable Image-to-Video Generation</strong></p>
 <p><em>Boyang Wang, Xuweiyi Chen, <strong>Matheus Gadelha</strong>, Zezhou Cheng</em></p>
-<footer><a href=https://arxiv.org/abs/2505.21491><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://uva-computer-vision-lab.github.io/Frame-In-N-Out/><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>ICCV 2025</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">ICCV 2025</span><span class="card-links"><a href=http://arxiv.org/pdf/2508.21032><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://ddecatur.github.io/hierarchical-diffusion/><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt="" src="fig/hierarchical_diffusion.png" /></p>
 <p><strong>Reusing Computation in Text‑to‑Image Diffusion for Efficient Generation of Image Sets</strong></p>
 <p><em>Dale Decatur, Thibault Groueix, Yifan Wang, Rana Hanocka, Vova Kim, <strong>Matheus Gadelha</strong></em></p>
-<footer><a href=http://arxiv.org/pdf/2508.21032><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://ddecatur.github.io/hierarchical-diffusion/><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>ICCV 2025</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">ICCV 2025</span><span class="card-links"><a href=https://arxiv.org/pdf/2412.16776><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://sonsang.github.io/dmesh2-project/><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt="" src="fig/dmeshpp.png" /></p>
 <p><strong>DMesh++: An Efficient Differentiable Mesh for Complex Shapes</strong></p>
 <p><em>Sanghyun Son, <strong>Matheus Gadelha</strong>, Yang Zhou, Matthew Fisher, Zexiang Xu, Ming C. Lin, Yi Zhou</em></p>
-<footer><a href=https://arxiv.org/pdf/2412.16776><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://sonsang.github.io/dmesh2-project/><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>SIGGRAPH 2025</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">SIGGRAPH 2025</span><span class="card-links"> &nbsp;&nbsp;&nbsp; <a href=https://3dfixup.github.io/><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt="" src="fig/teaser_3dfixup.gif" /></p>
 <p><strong>3D-Fixup: Advancing Photo Editing with 3D Priors</strong></p>
 <p><em>Yen-Chi Cheng, Krishna Kumar Singh, Jae Shin Yoon, Alex Schwing, Liangyan Gui, <strong>Matheus Gadelha</strong>, Paul Guerrero, Nanxuan Zhao</em></p>
-<footer> &nbsp;&nbsp;&nbsp; <a href=https://3dfixup.github.io/><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>CVPR 2025</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">CVPR 2025</span><span class="card-links"><a href=https://arxiv.org/pdf/2501.12910><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://graphics.unizar.es/projects/PreciseCam2024/><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt="" src="fig/precisecam.png" /></p>
 <p><strong>PreciseCam: Precise Camera Control for Text-to-Image Generation</strong></p>
 <p><em>Edurne Bernal-Berdun, Ana Serrano, Belen Masia, <strong>Matheus Gadelha</strong>, Yannick Hold-Geoffroy, Xin Sun, Diego Gutierrez</em></p>
-<footer><a href=https://arxiv.org/pdf/2501.12910><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://graphics.unizar.es/projects/PreciseCam2024/><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>CVPR 2025</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">CVPR 2025</span><span class="card-links"><a href=https://motionmodes.github.io/resources/MotionModes.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://motionmodes.github.io/><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt="" src="fig/motionmodes.gif" /></p>
 <p><strong>Motion Modes: What Could Happen Next?</strong></p>
 <p><em>Karran Pandey, <strong>Matheus Gadelha</strong>, Yannick Hold-Geoffroy, Karan Singh, Niloy J. Mitra, Paul Guerrero</em></p>
-<footer><a href=https://motionmodes.github.io/resources/MotionModes.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://motionmodes.github.io/><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>CVPR 2025</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">CVPR 2025</span><span class="card-links"><a href=https://arxiv.org/pdf/2412.00518.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://amirbarda.github.io/Instant3dit.github.io/><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt="" src="fig/instant3dit.png" /></p>
 <p><strong>Instant3dit: Multiview Inpainting for Fast Editing of 3D Objects</strong></p>
 <p><em>Amir Barda, <strong>Matheus Gadelha</strong>, Vladimir Kim, Noam Aigerman, Amit Haim Bermano, Thibault Groueix</em></p>
-<footer><a href=https://arxiv.org/pdf/2412.00518.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://amirbarda.github.io/Instant3dit.github.io/><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>SIGGRAPH Asia 2024</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">SIGGRAPH Asia 2024</span><span class="card-links"><a href=https://arxiv.org/pdf/2406.01592><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://text-mesh-refinement-project.github.io/><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt="" src="fig/mesh_refinement.png" /></p>
 <p><strong>Text-guided Controllable Mesh Refinement for Interactive 3D Modeling</strong></p>
 <p><em>Yun-Chun Chen, Selena Ling, Zhiqin Chen, Vladimir G. Kim, <strong>Matheus Gadelha</strong>, Alec Jacobson</em></p>
-<footer><a href=https://arxiv.org/pdf/2406.01592><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://text-mesh-refinement-project.github.io/><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>NeurIPS 2024</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">NeurIPS 2024</span><span class="card-links"><a href=https://www.cs.umd.edu/~shh1295/dmesh/full2.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://sonsang.github.io/dmesh-project/><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt="" src="fig/dmesh_teaser.gif" /></p>
 <p><strong>DMesh: A Differentiable Representation for General Meshes</strong></p>
 <p><em>Sanghyun Son, <strong>Matheus Gadelha</strong>, Yang Zhou, Zexiang Xu, Ming C. Lin, Yi Zhou</em></p>
-<footer><a href=https://www.cs.umd.edu/~shh1295/dmesh/full2.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://sonsang.github.io/dmesh-project/><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>SIGGRAPH 2024</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">SIGGRAPH 2024</span><span class="card-links"><a href=https://arxiv.org/abs/2402.16994><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://lodurality.github.io/GEM3D/><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt=" " src="fig/gem3d.gif" /></p>
 <p><strong>GEM3D: Generative Medial Abstractions for 3D Shape Synthesis</strong></p>
 <p><em>Dmitry Petrov, Pradyumn Goyal, Vikas Thamizharasan, Vova Kim, <strong>Matheus Gadelha</strong>, Melinos Averkiou, Siddhartha Chaudhuri, Evangelos Kalogerakis</em></p>
-<footer><a href=https://arxiv.org/abs/2402.16994><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://lodurality.github.io/GEM3D/><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>CVPR 2024</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">CVPR 2024</span><span class="card-links"><a href=https://ttchengab.github.io/continuous_3d_words/c3d_words.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://ttchengab.github.io/continuous_3d_words/><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt=" " src="fig/c3dw.png" /></p>
 <p><strong>Learning Continuous 3D Words for Text-to-Image Generation</strong></p>
 <p><em>Ta-Ying Cheng, <strong>Matheus Gadelha</strong>, Thibault Groueix, Matthew Fisher, Radomir Mech, Andrew Markham, Niki Trigoni</em></p>
-<footer><a href=https://ttchengab.github.io/continuous_3d_words/c3d_words.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://ttchengab.github.io/continuous_3d_words/><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>CVPR 2024</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">CVPR 2024</span><span class="card-links"><a href=https://arxiv.org/pdf/2312.02190.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://diffusionhandles.github.io/><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt=" " src="fig/sunflower-gif.gif" /></p>
 <p><strong>Diffusion Handles: Enabling 3D Edits for Diffusion Models by Lifting Activations to 3D</strong></p>
 <p><em>Karran Pandey, Paul Guerrero, <strong>Matheus Gadelha</strong>, Yannick Hold-Geoffroy, Karan Singh, Niloy Mitra</em></p>
-<footer><a href=https://arxiv.org/pdf/2312.02190.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://diffusionhandles.github.io/><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>CVPR 2024</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">CVPR 2024</span><span class="card-links"><a href=https://primecai.github.io/generative_rendering/assets/pdf/low_res.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://primecai.github.io/generative_rendering/index><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt=" " src="fig/genren.gif" /></p>
 <p><strong>Generative Rendering: Controllable 4D-Guided Video Generation with 2D Diffusion Models</strong></p>
 <p><em>Shengqu Cai, Duygu Ceylan, <strong>Matheus Gadelha</strong>, Chun-Hao Huang, Tuanfeng Y. Wang, Gordon Wetzstein</em></p>
-<footer><a href=https://primecai.github.io/generative_rendering/assets/pdf/low_res.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://primecai.github.io/generative_rendering/index><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>ICCV 2023</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">ICCV 2023</span><span class="card-links"><a href=https://openaccess.thecvf.com/content/ICCV2023/html/Cheng_3DMiner_Discovering_Shapes_from_Large-Scale_Unannotated_Image_Datasets_ICCV_2023_paper.html><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://ttchengab.github.io/3dminerOfficial/><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt=" " src="fig/3dminer.png" /></p>
 <p><strong>3DMiner: Discovering Shapes from Large-Scale Unannotated Image Datasets</strong></p>
 <p><em>Ta-Ying Cheng, <strong>Matheus Gadelha</strong>, Soren Pirk, Thibault Groueix, Radomir Mech, Andrew Markham, Niki Trigoni</em></p>
-<footer><a href=https://openaccess.thecvf.com/content/ICCV2023/html/Cheng_3DMiner_Discovering_Shapes_from_Large-Scale_Unannotated_Image_Datasets_ICCV_2023_paper.html><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://ttchengab.github.io/3dminerOfficial/><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>TVCG</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">TVCG</span><span class="card-links"><a href=https://arxiv.org/pdf/2205.13682.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://lodurality.github.io/ANISE/><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt=" " src="fig/anise.png" /></p>
 <p><strong>ANISE: Assembly-based Neural Implicit Surface rEconstruction</strong></p>
 <p><em>Dmitry Petrov, <strong>Matheus Gadelha</strong>, Radomir Mech, Evangelos Kalogerakis</em></p>
-<footer><a href=https://arxiv.org/pdf/2205.13682.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://lodurality.github.io/ANISE/><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>ICCV 2023 Workshop</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">ICCV 2023 Workshop</span><span class="card-links"><a href=https://arxiv.org/pdf/2212.06300.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://people.cs.umass.edu/~zezhoucheng/acci-turn/><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt=" " src="fig/turntables.png" /></p>
 <p><strong>Accidental Turntables: Learning 3D Pose by Watching Objects Turn</strong></p>
 <p><em>Zezhou Cheng, <strong>Matheus Gadelha</strong>, Subhransu Maji</em></p>
-<footer><a href=https://arxiv.org/pdf/2212.06300.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://people.cs.umass.edu/~zezhoucheng/acci-turn/><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>ECCV 2022 Workshop</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">ECCV 2022 Workshop</span><span class="card-links"><a href=https://arxiv.org/pdf/2207.00182.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; </span></header>
+<div class="card-body">
 <p><img class='float-left' alt=" " src="fig/recovdetail.png" /></p>
 <p><strong>Recovering Detail in 3D Shapes Using Disparity Maps</strong></p>
 <p><em>Marissa Ramirez de Chanlatte, <strong>Matheus Gadelha</strong>, Thibault Groueix, Radomir Mech</em></p>
-<footer><a href=https://arxiv.org/pdf/2207.00182.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; </footer>
+</div>
 </article>
 
 
-<article>
-<header>SGP 2022</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">SGP 2022</span><span class="card-links"><a href=https://arxiv.org/pdf/2112.13942.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; </span></header>
+<div class="card-body">
 <p><img class='float-left' alt=" " src="fig/surfit.png" /></p>
 <p><strong>PrimFit: Learning to Fit Primitives Improves Few Shot Learning on Point Clouds</strong></p>
 <p><em>Gopal Sharma, Bidya Dash, <strong>Matheus Gadelha</strong>, Aruni RoyChowdhury, Marios Loizou, Evangelos Kalogerakis, Liangliang Cao, Erik Learned-Miller, Rui Wang and Subhransu Maji</em></p>
-<footer><a href=https://arxiv.org/pdf/2112.13942.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; </footer>
+</div>
 </article>
 
 
-<article>
-<header>CVPR 2022</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">CVPR 2022</span><span class="card-links"><a href=https://openaccess.thecvf.com/content/CVPR2022/papers/Xie_PlanarRecon_Real-Time_3D_Plane_Detection_and_Reconstruction_From_Posed_Monocular_CVPR_2022_paper.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://neu-vi.github.io/planarrecon/><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt=" " src="fig/planar_recon.png" /></p>
 <p><strong>PlanarRecon: Real-time 3D Plane Detection and Reconstruction from Posed Monocular Videos</strong></p>
 <p><em>Yiming Xie, <strong>Matheus Gadelha</strong>, Fengting Yang, Xiaowei Zhou, Huaizu Jiang</em></p>
-<footer><a href=https://openaccess.thecvf.com/content/CVPR2022/papers/Xie_PlanarRecon_Real-Time_3D_Plane_Detection_and_Reconstruction_From_Posed_Monocular_CVPR_2022_paper.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://neu-vi.github.io/planarrecon/><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>IEEE AIVR 2021</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">IEEE AIVR 2021</span><span class="card-links"><a href=AIVR_2021___AR_FOV_prediction.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; </span></header>
+<div class="card-body">
 <p><img class='float-left' alt=" " src="fig/tmm_paper.png" /></p>
 <p><strong>Trace Match &amp; Merge: Long-TermField-Of-View Prediction for AR Applications</strong></p>
 <p><em>Adam Viola<code>*</code>, Sahil Sharma<code>*</code>,Pankaj Bishnoi<code>*</code>, <strong>Matheus Gadelha</strong>, Stefano Petrangeli, Haoliang Wang, Viswanathan Swaminathan</em></p>
 <p><strong>Best paper candidate at <a href="https://ieee-aivr.cs.nthu.edu.tw/program">IEEE AIVR</a></strong>.</p>
-<footer><a href=AIVR_2021___AR_FOV_prediction.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; </footer>
+</div>
 </article>
 
 
-<article>
-<header>IJCV 2020</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">IJCV 2020</span><span class="card-links"><a href=https://arxiv.org/abs/1906.04910><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; </span></header>
+<div class="card-body">
 <p><img class='float-left' alt=" " src="fig/prgan_journal.png" /></p>
 <p><strong>Inferring 3D Shapes from Image Collections using Adversarial Networks</strong></p>
 <p><em><strong>Matheus Gadelha</strong>, Aartika Rai, Rui Wang, Subhransu Maji</em></p>
-<footer><a href=https://arxiv.org/abs/1906.04910><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; </footer>
+</div>
 </article>
 
 
-<article>
-<header>ECCV 2020</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">ECCV 2020</span><span class="card-links"><a href=https://arxiv.org/pdf/2003.13834.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=selfsupacd/index.html><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt=" " src="fig/acd.png" /></p>
 <p><strong>Label-Efficient Learning on Point Clouds using Approximate Convex Decompositions</strong></p>
 <p><em><strong>Matheus Gadelha</strong><code>*</code>, Aruni RoyChowdhury<code>*</code>, Gopal Sharma, Evangelos Kalogerakis, Liangliang Cao, Erik Learned-Miller, Rui Wang, Subhransu Maji</em></p>
-<footer><a href=https://arxiv.org/pdf/2003.13834.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=selfsupacd/index.html><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>arXiv</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">arXiv</span><span class="card-links"><a href=https://arxiv.org/pdf/2004.04242.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; </span></header>
+<div class="card-body">
 <p><img class='float-left' alt=" " src="fig/dmp_snapshot.png" /></p>
 <p><strong>Deep Manifold Prior</strong></p>
 <p><em><strong>Matheus Gadelha</strong>, Rui Wang, Subhransu Maji</em></p>
 <p><strong>Best poster honorable mention at <a href="http://visual.cs.brown.edu/workshops/necv2019/">NECV</a></strong>.</p>
-<footer><a href=https://arxiv.org/pdf/2004.04242.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; </footer>
+</div>
 </article>
 
 
-<article>
-<header>CVPR 2020</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">CVPR 2020</span><span class="card-links"> &nbsp;&nbsp;&nbsp; <a href=shapehandles/index.html><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt=" " src="shapehandles/fig/snapshot.png" /></p>
 <p><strong>Learning Generative Models of Shape Handles</strong></p>
 <p><em><strong>Matheus Gadelha</strong>, Giorgio Gori, Duygu Ceylan, Radomir Mech, Nathan Carr, Tamy Boubekeur, Rui Wang, Subhransu Maji</em></p>
-<footer> &nbsp;&nbsp;&nbsp; <a href=shapehandles/index.html><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>ICCV 2019</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">ICCV 2019</span><span class="card-links"><a href=shaperec/dsp_paper.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=shaperec/index.html><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt=" " src="shaperec/fig/abstract.png" /></p>
 <p><strong>Shape Reconstruction with Differentiable Projections and Deep Priors</strong></p>
 <p><em><strong>Matheus Gadelha</strong>, Rui Wang, Subhransu Maji</em></p>
-<footer><a href=shaperec/dsp_paper.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=shaperec/index.html><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>CVPR 2019</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">CVPR 2019</span><span class="card-links"><a href=https://arxiv.org/abs/1904.07457><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://people.cs.umass.edu/~zezhoucheng/gp-dip/><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt=" " src="fig/bayesdip.png" /></p>
 <p><strong>A Bayesian Perspective on the Deep Image Prior</strong></p>
 <p><em>Zezhou Cheng, <strong>Matheus Gadelha</strong>, Subhransu Maji, Daniel Sheldon</em></p>
-<footer><a href=https://arxiv.org/abs/1904.07457><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://people.cs.umass.edu/~zezhoucheng/gp-dip/><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>ECCV 2018 - 3DRMS Workshop</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">ECCV 2018 - 3DRMS Workshop</span><span class="card-links"><a href=https://arxiv.org/abs/1809.02560><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://people.cs.umass.edu/~jcsu/papers/shape_recog/><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt=" " src="fig/3dsc.png" /></p>
 <p><strong>A Deeper Look at 3D Shape Classifiers</strong></p>
 <p><em>Jong-Chyi Su, <strong>Matheus Gadelha</strong>, Rui Wang, Subhransu Maji</em></p>
 <p></br></p>
-<footer><a href=https://arxiv.org/abs/1809.02560><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://people.cs.umass.edu/~jcsu/papers/shape_recog/><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>ECCV 2018</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">ECCV 2018</span><span class="card-links"><a href=https://arxiv.org/abs/1807.03520><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=mrt/index.html><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt=" " src="mrt/fig/smallabs.png" /></p>
 <p><strong>Multiresolution Tree Networks for Point Cloud Processing</strong></p>
 <p><em><strong>Matheus Gadelha</strong>, Rui Wang, Subhransu Maji</em></p>
-<footer><a href=https://arxiv.org/abs/1807.03520><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=mrt/index.html><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>3DV 2017</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">3DV 2017</span><span class="card-links"><a href=https://arxiv.org/pdf/1612.05872.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=prgan/index.html><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt=" " src="prgan/fig/overview.png" /></p>
 <p><strong>Unsupervised 3D Shape Induction from 2D Views of Multiple Objects</strong></p>
 <p><em><strong>Matheus Gadelha</strong>, Subhransu Maji, Rui Wang</em></p>
-<footer><a href=https://arxiv.org/pdf/1612.05872.pdf><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=prgan/index.html><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>3DV 2017</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">3DV 2017</span><span class="card-links"><a href=https://arxiv.org/abs/1707.06375><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://people.cs.umass.edu/~zlun/papers/SketchModeling/><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt=" " src="fig/sketch.png" /></p>
 <p><strong>3D Shape Reconstruction from Sketches via Multi-view Convolutional Networks</strong></p>
 <p><em>Zhaoliang Lun, <strong>Matheus Gadelha</strong>, Evangelos Kalogerakis, Subhransu Maji, Rui Wang</em></p>
-<footer><a href=https://arxiv.org/abs/1707.06375><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=https://people.cs.umass.edu/~zlun/papers/SketchModeling/><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 
-<article>
-<header>BMVC 2017</header>
+<article class="paper-card">
+<header class="card-header"><span class="venue">BMVC 2017</span><span class="card-links"><a href=https://arxiv.org/abs/1707.06267><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=sppc/index.html><i class="fa-solid fa-globe"></i></a></span></header>
+<div class="card-body">
 <p><img class='float-left' alt=" " src="sppc/fig/airplanes_sorting_new2.png" /></p>
 <p><strong>Shape Generation using Spatially Partitioned Point Clouds</strong></p>
 <p><em><strong>Matheus Gadelha</strong>, Subhransu Maji, Rui Wang</em></p>
-<footer><a href=https://arxiv.org/abs/1707.06267><i class="fa-solid fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a href=sppc/index.html><i class="fa-solid fa-globe"></i></a></footer>
+</div>
 </article>
 
 

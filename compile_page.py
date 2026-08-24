@@ -35,10 +35,9 @@ def parse_techtransfer(techtransfers_md: str) -> List[str]:
         # select venue by finding [[[venue]]] in match and then remove it
         venue_pattern = r"\[\[\[(.*?)\]\]\]"
         venue_match = re.search(venue_pattern, match)
-        venue_tag = ""
+        venue_name = ""
         if venue_match:
             venue_name = venue_match.group(1)
-            venue_tag = f"<header>{venue_name}</header>"
             match = re.sub(venue_pattern, "", match)
 
         # select project page link by finding [[Project Page](link)] and then remove it
@@ -67,10 +66,20 @@ def parse_techtransfer(techtransfers_md: str) -> List[str]:
         # for every img tag in md string, make max-width 150px
         md = re.sub(r"<img", "<img class='float-left'", md)
 
-        linktag = f'<footer>{preprint_tag} &nbsp;&nbsp;&nbsp; {project_tag}</footer>'
+        header_tag = (
+            f'<header class="card-header"><span class="venue">{venue_name}</span>'
+            f'<span class="card-links">{preprint_tag} &nbsp;&nbsp;&nbsp; {project_tag}</span></header>'
+            if venue_name or preprint_tag or project_tag
+            else ""
+        )
 
         # wrap md in article tag
-        md = f"<article>\n" f"{venue_tag}\n" f"{md}\n" f"{linktag}\n" f"</article>\n\n"
+        md = (
+            f'<article class="tech-card">\n'
+            f"{header_tag}\n"
+            f'<div class="card-body">\n{md}\n</div>\n'
+            f"</article>\n\n"
+        )
 
         techtransfers.append(md)
 
@@ -88,10 +97,9 @@ def parse_papers(papers_md: str) -> List[str]:
         # select venue by finding [[[venue]]] in match and then remove it
         venue_pattern = r"\[\[\[(.*?)\]\]\]"
         venue_match = re.search(venue_pattern, match)
-        venue_tag = ""
+        venue_name = ""
         if venue_match:
             venue_name = venue_match.group(1)
-            venue_tag = f"<header>{venue_name}</header>"
             match = re.sub(venue_pattern, "", match)
 
         # select project page link by finding [[Project Page](link)] and then remove it
@@ -121,10 +129,20 @@ def parse_papers(papers_md: str) -> List[str]:
         md = re.sub(r"<img", "<img class='float-left'", md)
         md = re.sub(r"<video", "<video class='float-left'", md)
 
-        linktag = f'<footer>{preprint_tag} &nbsp;&nbsp;&nbsp; {project_tag}</footer>'
+        header_tag = (
+            f'<header class="card-header"><span class="venue">{venue_name}</span>'
+            f'<span class="card-links">{preprint_tag} &nbsp;&nbsp;&nbsp; {project_tag}</span></header>'
+            if venue_name or preprint_tag or project_tag
+            else ""
+        )
 
         # wrap md in article tag
-        md = f"<article>\n" f"{venue_tag}\n" f"{md}\n" f"{linktag}\n" f"</article>\n\n"
+        md = (
+            f'<article class="paper-card">\n'
+            f"{header_tag}\n"
+            f'<div class="card-body">\n{md}\n</div>\n'
+            f"</article>\n\n"
+        )
 
         papers.append(md)
 
@@ -203,8 +221,7 @@ if __name__ == "__main__":
     experience_html = "\n".join(experience_html_list)
 
     techtransfer_html_list = parse_techtransfer(techtransfer)
-    techtransfer_html_column1 = "\n".join(techtransfer_html_list[0::2])
-    techtransfer_html_column2 = "\n".join(techtransfer_html_list[1::2])
+    techtransfer_html = "\n".join(techtransfer_html_list)
 
     papers_html_list = parse_papers(papers)
     papers_html = "\n".join(papers_html_list)
@@ -221,8 +238,7 @@ if __name__ == "__main__":
                 tt_preamble=tt_preable_html,
                 experience=experience_html,
                 papers=papers_html,
-                techtransfers_column1=techtransfer_html_column1,
-                techtransfers_column2=techtransfer_html_column2,
+                techtransfers=techtransfer_html,
                 service=service_html,
                 interns_column1=interns_html_column1,
                 interns_column2=interns_html_column2,

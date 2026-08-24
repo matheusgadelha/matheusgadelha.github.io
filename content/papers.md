@@ -1,4 +1,15 @@
 :::paper
+![](fig/vips_bear.gif)
+[[[SIGGRAPH Asia 2026]]]
+**ViPS: Video-informed Pose Spaces for Auto-Rigged Meshes**
+
+_Honglin Chen, Karran Pandey, Rundi Wu, **Matheus Gadelha**, Yannick Hold-Geoffroy, Ayush Tewari, Niloy J. Mitra, Changxi Zheng, Paul Guerrero_
+
+[[Pre-print](https://arxiv.org/abs/2604.17623)]
+[[Project Page](https://honglin-c.github.io/vips/)]
+:::
+
+:::paper
 <video autoplay loop muted playsinline><source src="fig/medieval_trans_z_forward_trans.mp4" type="video/mp4"></video>
 [[[ECCV 2026]]]
 **GimbalDiffusion: Gravity-Aware Camera Control for Video Generation**
