@@ -159,6 +159,12 @@
 #set enum(numbering: "1.", tight: true)
 
 + #paper(
+    "ViPS: Video-informed Pose Spaces for Auto-Rigged Meshes",
+    [Honglin Chen, Karran Pandey, Rundi Wu, #my-name, Yannick Hold-Geoffroy, Ayush Tewari, Niloy J. Mitra, Changxi Zheng, Paul Guerrero],
+    siggraph_asia(2026)
+  )
+
++ #paper(
     "GimbalDiffusion: Gravity-Aware Camera Control for Video Generation",
     [Frédéric Fortier-Chouinard, Yannick Hold-Geoffroy, Valentin Deschaintre, #my-name, Jean-François Lalonde],
     eccv(2026)
