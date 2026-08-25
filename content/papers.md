@@ -1,15 +1,4 @@
 :::paper
-<video autoplay loop muted playsinline><source src="fig/lumitokens_marble_bust.mp4" type="video/mp4"></video>
-[[[ECCV 2026]]]
-**LumiTokens: 3D Relighting via Token-Space Lighting Transformation**
-
-_Yiwen Chen, **Matheus Gadelha**, Huaizu Jiang_
-
-[[Pre-print](https://arxiv.org/abs/2608.18215)]
-[[Project Page](https://neu-vi.github.io/LumiTokens/)]
-:::
-
-:::paper
 ![](fig/vips_bear.gif)
 [[[SIGGRAPH Asia 2026]]]
 **ViPS: Video-informed Pose Spaces for Auto-Rigged Meshes**
@@ -18,6 +7,17 @@ _Honglin Chen, Karran Pandey, Rundi Wu, **Matheus Gadelha**, Yannick Hold-Geoffr
 
 [[Pre-print](https://arxiv.org/abs/2604.17623)]
 [[Project Page](https://honglin-c.github.io/vips/)]
+:::
+
+:::paper
+<video autoplay loop muted playsinline><source src="fig/lumitokens_marble_bust.mp4" type="video/mp4"></video>
+[[[ECCV 2026]]]
+**LumiTokens: 3D Relighting via Token-Space Lighting Transformation**
+
+_Yiwen Chen, **Matheus Gadelha**, Huaizu Jiang_
+
+[[Pre-print](https://arxiv.org/abs/2608.18215)]
+[[Project Page](https://neu-vi.github.io/LumiTokens/)]
 :::
 
 :::paper
