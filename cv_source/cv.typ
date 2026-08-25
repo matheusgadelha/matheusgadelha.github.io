@@ -159,6 +159,12 @@
 #set enum(numbering: "1.", tight: true)
 
 + #paper(
+    "LumiTokens: 3D Relighting via Token-Space Lighting Transformation",
+    [Yiwen Chen, #my-name, Huaizu Jiang],
+    eccv(2026)
+  )
+
++ #paper(
     "ViPS: Video-informed Pose Spaces for Auto-Rigged Meshes",
     [Honglin Chen, Karran Pandey, Rundi Wu, #my-name, Yannick Hold-Geoffroy, Ayush Tewari, Niloy J. Mitra, Changxi Zheng, Paul Guerrero],
     siggraph_asia(2026)
